@@ -11,6 +11,5 @@ public class Details_train extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.details_train);
 
-        //azaa
     }
 }
