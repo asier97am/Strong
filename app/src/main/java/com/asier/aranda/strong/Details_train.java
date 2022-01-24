@@ -9,7 +9,7 @@ public class Details_train extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.details_train);
+        setContentView(R.layout.details_train2);
 
     }
 }
