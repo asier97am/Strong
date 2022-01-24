@@ -10,7 +10,7 @@
 
     <!-- TextView Strong-->
     <TextView
-        android:id="@+id/tv1"
+        android:id="@+id/tvStrong"
         android:layout_width="248dp"
         android:layout_height="76dp"
         android:layout_marginTop="20dp"
@@ -27,7 +27,7 @@
 
     <!-- TextView Bienvenido -->
     <TextView
-        android:id="@+id/tv2"
+        android:id="@+id/tvRegistro"
         android:layout_width="329dp"
         android:layout_height="72dp"
         android:layout_marginStart="20dp"
@@ -38,7 +38,7 @@
         android:textColor="@color/blancoApp"
         android:textSize="55dp"
         app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda"
-        app:layout_constraintTop_toBottomOf="@+id/tv1" />
+        app:layout_constraintTop_toBottomOf="@+id/tvStrong" />
 
     <!-- TextView Texto (a un paso...) -->
     <TextView
@@ -52,7 +52,7 @@
         android:textColor="@color/blancoApp"
         android:textSize="18dp"
         app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda"
-        app:layout_constraintTop_toBottomOf="@+id/tv2"
+        app:layout_constraintTop_toBottomOf="@+id/tvRegistro"
         android:layout_marginStart="20dp"/>
 
     <!-- Button Acceder -->

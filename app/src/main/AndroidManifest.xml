@@ -9,9 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Strong">
+
+        <!-- Activity registro-->
         <activity
             android:name=".Registro"
             android:exported="true" />
+
+        <!-- Activity bienvenida-->
         <activity
             android:name=".Bienvenida"
             android:exported="true">
