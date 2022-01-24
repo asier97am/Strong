@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
+    style="@style/Theme.AppCompat.DayNight.NoActionBar"
     tools:context=".Bienvenida">
 
     <!-- TextView Strong-->
@@ -11,68 +13,78 @@
         android:id="@+id/tv1"
         android:layout_width="248dp"
         android:layout_height="76dp"
-        android:text="STRONG"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/bebasneueregular"
-        android:textSize="32dp"
-        android:textColor="@color/verdeApp"
         android:gravity="center"
+        android:text="STRONG"
+        android:textColor="@color/verdeApp"
+        android:textSize="60dp"
         app:layout_constraintEnd_toStartOf="@+id/GuidelineDerecha"
         app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda"
-        tools:layout_editor_absoluteY="115dp"
+        app:layout_constraintTop_toTopOf="@+id/GuidelineSuperior"
         tools:ignore="MissingConstraints" />
 
 
     <!-- TextView Bienvenido -->
     <TextView
         android:id="@+id/tv2"
-        android:layout_width="281dp"
-        android:layout_height="68dp"
-        android:fontFamily="@font/aeonikair"
+        android:layout_width="329dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/aeonikbold"
         android:text="Bienvenido"
-        android:textSize="55dp"
+        android:gravity="left"
         android:textColor="@color/blancoApp"
-        tools:layout_editor_absoluteX="48dp"
-        tools:layout_editor_absoluteY="231dp"
-        tools:ignore="MissingConstraints" />
+        android:textSize="55dp"
+        app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda"
+        app:layout_constraintTop_toBottomOf="@+id/tv1" />
 
     <!-- TextView Texto (a un paso...) -->
     <TextView
         android:id="@+id/tv3"
-        android:layout_width="226dp"
-        android:layout_height="45dp"
+        android:layout_width="290dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/aeonikbold"
+        android:gravity="left"
         android:text="A un paso de alcanzar la vida que siempre has deseado"
-        tools:layout_editor_absoluteX="65dp"
-        tools:layout_editor_absoluteY="312dp" />
+        android:textColor="@color/blancoApp"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda"
+        app:layout_constraintTop_toBottomOf="@+id/tv2"
+        android:layout_marginStart="20dp"/>
 
     <!-- Button Acceder -->
     <Button
         android:id="@+id/bt1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
+        style="@style/botonVerde"
+        android:text="ACCEDER"
         app:layout_constraintEnd_toStartOf="@+id/GuidelineDerecha"
         app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda"
-        tools:layout_editor_absoluteY="495dp" />
+        app:layout_constraintTop_toBottomOf="@+id/tv3"
+        android:layout_marginTop="110dp"/>
 
     <!-- Button Entrar como invitado -->
     <Button
         android:id="@+id/bt2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
+        style="@style/botonNegro"
+        android:text="ENTRAR COMO INVITADO"
         app:layout_constraintEnd_toStartOf="@+id/GuidelineDerecha"
         app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda"
-        tools:layout_editor_absoluteY="564dp" />
+        app:layout_constraintTop_toBottomOf="@+id/bt1"
+        android:layout_marginTop="15dp"/>
 
     <!-- TextView Registro -->
     <TextView
         android:id="@+id/tv4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Registro"
+        android:text="REGISTRO"
+        android:textColor="@color/verdeApp"
+        app:layout_constraintBottom_toTopOf="@+id/GuidelineInferior"
         app:layout_constraintEnd_toStartOf="@+id/GuidelineDerecha"
-        app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda"
-        tools:layout_editor_absoluteY="640dp" />
+        app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda" />
 
 
 
@@ -108,6 +120,4 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.95" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

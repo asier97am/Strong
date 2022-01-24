@@ -4,7 +4,7 @@
     <!-- Button verde -->
     <style name="botonVerde" >
         <item name="android:backgroundTint">@color/verdeApp</item>
-        <item name="cornerRadius">10dp</item>
+        <item name="cornerRadius">15dp</item>
         <item name="android:state_pressed">true</item>
         <item name="android:textColor">@color/blancoApp</item>
         <item name="fontFamily">@font/aeonikbold</item>
@@ -17,7 +17,7 @@
     <style name="botonNegro" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="alpha">1</item>
         <item name="android:state_pressed">true</item>
-        <item name="cornerRadius">10dp</item>
+        <item name="cornerRadius">15dp</item>
         <item name="android:textColor">@color/blancoApp</item>
         <item name="fontFamily">@font/aeonikbold</item>
         <item name="android:layout_width">0dp</item>

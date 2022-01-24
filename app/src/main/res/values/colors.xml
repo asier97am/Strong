@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
 
     <!-- COLORES AÑADIDOS-->
+    <color name="transparente">#FFFFFF</color>
     <color name="verdeApp">#40D876</color>
     <color name="blancoApp">#FFFFFF</color>
     <color name="negroApp">#232441</color>
