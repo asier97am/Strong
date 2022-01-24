@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Bienvenida">
+
+    <!-- TextView Strong-->
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="248dp"
+        android:layout_height="76dp"
+        android:text="STRONG"
+        android:fontFamily="@font/bebasneueregular"
+        android:textSize="32dp"
+        android:textColor="@color/verdeApp"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/GuidelineDerecha"
+        app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda"
+        tools:layout_editor_absoluteY="115dp"
+        tools:ignore="MissingConstraints" />
+
+
+    <!-- TextView Bienvenido -->
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="281dp"
+        android:layout_height="68dp"
+        android:fontFamily="@font/aeonikair"
+        android:text="Bienvenido"
+        android:textSize="55dp"
+        android:textColor="@color/blancoApp"
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="231dp"
+        tools:ignore="MissingConstraints" />
+
+    <!-- TextView Texto (a un paso...) -->
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="226dp"
+        android:layout_height="45dp"
+        android:text="A un paso de alcanzar la vida que siempre has deseado"
+        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteY="312dp" />
+
+    <!-- Button Acceder -->
+    <Button
+        android:id="@+id/bt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintEnd_toStartOf="@+id/GuidelineDerecha"
+        app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda"
+        tools:layout_editor_absoluteY="495dp" />
+
+    <!-- Button Entrar como invitado -->
+    <Button
+        android:id="@+id/bt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintEnd_toStartOf="@+id/GuidelineDerecha"
+        app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda"
+        tools:layout_editor_absoluteY="564dp" />
+
+    <!-- TextView Registro -->
+    <TextView
+        android:id="@+id/tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registro"
+        app:layout_constraintEnd_toStartOf="@+id/GuidelineDerecha"
+        app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda"
+        tools:layout_editor_absoluteY="640dp" />
+
+
+
+    <!-- GUIDELINES -->
+    <!-- Guideline Izquierda-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GuidelineIzquierda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <!-- Guideline Derecha-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GuidelineDerecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <!-- Guideline Superior-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GuidelineSuperior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <!-- Guideline Inferior-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GuidelineInferior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
