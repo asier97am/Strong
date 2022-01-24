@@ -18,7 +18,7 @@
         android:gravity="center"
         android:text="STRONG"
         android:textColor="@color/verdeApp"
-        android:textSize="60dp"
+        android:textSize="50dp"
         app:layout_constraintEnd_toStartOf="@+id/GuidelineDerecha"
         app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda"
         app:layout_constraintTop_toTopOf="@+id/GuidelineSuperior"
@@ -30,14 +30,131 @@
         android:layout_width="329dp"
         android:layout_height="72dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="35dp"
         android:fontFamily="@font/aeonikbold"
         android:text="Registro"
         android:gravity="left"
         android:textColor="@color/blancoApp"
-        android:textSize="55dp"
+        android:textSize="45dp"
         app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda"
         app:layout_constraintTop_toBottomOf="@+id/tvStrong" />
+
+    <!-- CUADROS DE TEXTO RELLENABLES -->
+    <!-- TextInputLayout nombre de usuario -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilNombre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/GuidelineDerecha"
+        app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda"
+        app:layout_constraintTop_toBottomOf="@+id/tvRegistro">
+
+        <!-- EditText nombre de usuario -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:textColor="@color/blancoApp"
+            android:hint="Nombre de usuario"
+            android:maxLines="1">
+        </EditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- TextInputLayout email -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/GuidelineDerecha"
+        app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda"
+        app:layout_constraintTop_toBottomOf="@+id/tilNombre">
+
+        <!-- EditText email -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:hint="Email"
+            android:maxLines="1">
+        </EditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- TextInputLayout contraseña -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilContraseña"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/GuidelineDerecha"
+        app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda"
+        app:layout_constraintTop_toBottomOf="@+id/tilEmail">
+
+        <!-- EditText contraseña -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:inputType="textPassword"
+            android:hint="Contraseña"
+            android:maxLines="1">
+        </EditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- TextInputLayout repite contraseña -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilRepiteContraseña"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/GuidelineDerecha"
+        app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda"
+        app:layout_constraintTop_toBottomOf="@+id/tilContraseña">
+
+        <!-- EditText repite contraseña -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:inputType="textPassword"
+            android:hint="Repite contraseña"
+            android:maxLines="1">
+        </EditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!-- TextView Olvidaste Contraseña-->
+    <TextView
+        android:id="@+id/tvOlvidasteContraseña"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aeonikbold"
+        android:text="¿Olvidaste tu contraseña?"
+        android:textColor="@color/blancoApp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/bt1"
+        app:layout_constraintEnd_toStartOf="@+id/GuidelineDerecha"
+        app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda">
+    </TextView>
+
+
+    <!-- BOTONES -->
+    <!-- Button Acceder -->
+    <Button
+        android:id="@+id/bt1"
+        style="@style/botonVerde"
+        android:text="ACCEDER"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/bt2"
+        app:layout_constraintEnd_toStartOf="@+id/GuidelineDerecha"
+        app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda" />
+
+    <!-- Button Registrarse -->
+    <Button
+        android:id="@+id/bt2"
+        style="@style/botonNegro"
+        android:text="REGISTRARSE"
+        app:layout_constraintEnd_toStartOf="@+id/GuidelineDerecha"
+        app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda"
+        app:layout_constraintBottom_toTopOf="@+id/GuidelineInferior"
+        android:layout_marginTop="10dp"/>
 
 
     <!-- GUIDELINES -->

@@ -13,17 +13,19 @@
         <!-- Activity registro-->
         <activity
             android:name=".Registro"
-            android:exported="true" />
+            android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
 
         <!-- Activity bienvenida-->
         <activity
             android:name=".Bienvenida"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
