@@ -91,27 +91,33 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:orientation="horizontal"
+        style="@style/fondoBotones"
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"
-
         app:layout_constraintTop_toBottomOf="@+id/textView9">
 
 
         <RadioButton
             android:id="@+id/radioButton"
+            style="@style/seleccionBotones"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:gravity="center"
             android:text="Soy activo" />
+
 
         <RadioButton
             android:id="@+id/radioButton2"
+            style="@style/seleccionBotones"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Soy principiante" />
+            android:text="Soy principiante"
+            />
+
     </RadioGroup>
+
 
     <EditText
         android:id="@+id/edadDespRegistro"
@@ -146,9 +152,12 @@
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"
-        app:layout_constraintTop_toBottomOf="@+id/pesoDesRegistro">
+        app:layout_constraintTop_toBottomOf="@+id/pesoDesRegistro"
+        style="@style/fondoBotones"
+        >
 
         <RadioButton
+            style="@style/seleccionBotones"
             android:id="@+id/radioButton7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -156,6 +165,7 @@
             android:text="Hombre" />
 
         <RadioButton
+            style="@style/seleccionBotones"
             android:id="@+id/radioButton8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -167,7 +177,7 @@
         android:id="@+id/button"
         style="@style/botonVerde"
         android:layout_marginTop="28dp"
-        android:text="Button"
+        android:text="Aceptar"
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
         app:layout_constraintHorizontal_bias="0.833"
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"
