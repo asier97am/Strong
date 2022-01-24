@@ -13,4 +13,43 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+
+
+    <style name="Theme.SinBarra" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <!-- Color del hint de los textVieww. -->
+        <item name="colorPrimary">@color/negroApp</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/transparente</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+    </style>
+
+
+<!--    <style name="AppTheme" parent="Theme.AppCompat.Light">-->
+<!--        <item name="android:actionBarStyle">@style/ThemeActionBar</item>-->
+<!--        <item name="android:windowActionBarOverlay">true</item>-->
+<!--        &lt;!&ndash; Support library compatibility &ndash;&gt;-->
+<!--        <item name="actionBarStyle">@style/ThemeActionBar</item>-->
+<!--        <item name="windowActionBarOverlay">true</item>-->
+<!--    </style>-->
+
+<!--    <style name="ThemeActionBar" parent="Widget.AppCompat.Light.ActionBar.Solid">-->
+<!--        <item name="android:background"> @null </item>-->
+<!--        &lt;!&ndash; Support library compatibility &ndash;&gt;-->
+<!--        <item name="background">@null</item>-->
+<!--        <item name="android:displayOptions"> showHome | useLogo</item>-->
+<!--        <item name="displayOptions">showHome|useLogo</item>-->
+
+<!--    </style>-->
+
+
 </resources>
