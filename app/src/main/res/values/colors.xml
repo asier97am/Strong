@@ -12,5 +12,6 @@
     <color name="verdeApp">#40D876</color>
     <color name="blancoApp">#FFFFFF</color>
     <color name="negroApp">#232441</color>
+    <color name="transparente">#22FFFFFF</color>
 
 </resources>

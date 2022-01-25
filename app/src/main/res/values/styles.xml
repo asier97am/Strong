@@ -40,8 +40,28 @@
     <!-- Fondo y estilo del contorno de los botones.-->
     <style name="fondoBotones">
         <item name="android:background">@color/negroApp</item>
-
     </style>
+
+    <!-- TEXT INPUT LAYOUT -->
+    <!-- TextInputLayout -->
+    <style name="textInputLayout">
+        <item name="android:textColorHint">@color/blancoApp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_marginTop">25dp</item>
+    </style>
+
+    <!-- EditText -->
+    <style name="editText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">65dp</item>
+        <item name="android:fontFamily">@font/aeonikbold</item>
+        <item name="android:textColorHint">@color/blancoApp</item>
+        <item name="maxLines">1</item>
+        <item name="android:textColor">@color/verdeApp</item>
+        <item name="android:background">@color/transparente</item>
+    </style>
+
 
 
 </resources>

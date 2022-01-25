@@ -9,33 +9,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout
 
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
-
-    <EditText
-        android:id="@+id/pesoDesRegistro"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:ems="10"
-        android:inputType="number"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
-        app:layout_constraintTop_toBottomOf="@+id/Peso"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <TextView
-        android:id="@+id/Peso"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="11dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
-        app:layout_constraintTop_toBottomOf="@+id/edadDespRegistro" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/lineaIzd"
@@ -55,10 +30,11 @@
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="60dp"
         android:text="@string/app_name"
         android:textSize="30dp"
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -80,95 +56,77 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:text="Texto sin importancia, cambiar mas adelante."
-        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
-        app:layout_constraintHorizontal_bias="0.07"
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilEdad"
         android:layout_width="0dp"
+        android:textColorHint="@color/blancoApp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:orientation="horizontal"
-        style="@style/fondoBotones"
-        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
-        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
-        app:layout_constraintTop_toBottomOf="@+id/textView9">
-
-
-        <RadioButton
-            android:id="@+id/radioButton"
-            style="@style/seleccionBotones"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="Soy activo" />
-
-
-        <RadioButton
-            android:id="@+id/radioButton2"
-            style="@style/seleccionBotones"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Soy principiante"
-            />
-
-    </RadioGroup>
-
-
-    <EditText
-        android:id="@+id/edadDespRegistro"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
-        app:layout_constraintHorizontal_bias="0.033"
-        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Edad"
+        android:layout_marginTop="20dp"
+        style="@style/textInputLayout"
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        >
+
+        <EditText
+            android:id="@+id/edadDespRegistro"
+            style="@style/editText"
+            android:hint="Edad"
+            android:inputType="number"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilContraseña"
+        android:layout_width="0dp"
+        android:textColorHint="@color/blancoApp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        style="@style/textInputLayout"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@+id/tilEdad">
+
+        <EditText
+            android:id="@+id/pesoDesRegistro"
+            style="@style/editText"
+            android:inputType="number"
+            android:hint="Peso"
+            tools:ignore="SpeakableTextPresentCheck"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <RadioGroup
         android:id="@+id/radioGroup2"
+        style="@style/fondoBotones"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="40dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"
-        app:layout_constraintTop_toBottomOf="@+id/pesoDesRegistro"
-        style="@style/fondoBotones"
-        >
+        app:layout_constraintTop_toBottomOf="@+id/tilContraseña">
 
         <RadioButton
-            style="@style/seleccionBotones"
             android:id="@+id/radioButton7"
+            style="@style/seleccionBotones"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Hombre" />
 
         <RadioButton
-            style="@style/seleccionBotones"
             android:id="@+id/radioButton8"
+            style="@style/seleccionBotones"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Mujer" />
     </RadioGroup>
@@ -176,16 +134,59 @@
     <Button
         android:id="@+id/button"
         style="@style/botonVerde"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="48dp"
         android:text="Aceptar"
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
-        app:layout_constraintHorizontal_bias="0.833"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup2"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        style="@style/fondoBotones"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup2"
+        tools:layout_editor_absoluteY="291dp"
+        android:layout_marginTop="34dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="194dp"
+            android:layout_height="wrap_content"
+            app:helperText="hola"
+            app:helperTextTextColor="@color/white">
+
+            <RadioButton
+                android:id="@+id/radioButton"
+                style="@style/seleccionBotones"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Soy activo" />
+        </com.google.android.material.textfield.TextInputLayout>
 
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:helperText="hola"
+            app:helperTextTextColor="@color/white">
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                style="@style/seleccionBotones"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:text="Soy principiante" />
+        </com.google.android.material.textfield.TextInputLayout>
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </RadioGroup>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
