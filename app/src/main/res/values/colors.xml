@@ -10,5 +10,6 @@
     <color name="verdeApp">#40D876</color>
     <color name="blancoApp">#FFFFFF</color>
     <color name="negroApp">#232441</color>
-    <color name="transparente">#FFFFFFFF</color>
+    <color name="pruebacoloralpha">#00232441</color>
+    <color name="transparente">#00000000</color>
 </resources>

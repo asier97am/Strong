@@ -1,10 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Page1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragment.Page1"
-    android:background="@color/teal_700"
-    android:alpha="0.2">
+    android:background="@drawable/hombredominada">
 
-</FrameLayout>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+
+
+    <!--ARRIBA LOS GUIDELINES-->
+
+    <ImageView
+        android:id="@+id/backView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"></ImageView>
+
+    <TextView
+        android:id="@+id/tvBienvenida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="45dp"
+        android:text="Hola,"
+        android:textColor="@color/verdeApp"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+
+    <TextView
+        android:id="@+id/tvNombreUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="45dp"
+        android:text="NombreUsuario"
+        android:textColor="@color/blancoApp"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tvBienvenida"
+        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/tvBienvenida">
+
+        <TextView
+            android:id="@+id/tvPesoIdeal"
+            style="@style/tvderecomendado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Peso ideal recomendado" />
+        <!--        style="@style/tv_De_Recomendado"-->
+        <TextView
+            android:id="@+id/tvVisualizaPeso"
+            style="@style/tvmostrarrecomendacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" "
+            tools:ignore="SpeakableTextPresentCheck" />
+        <!-- style="@styles/tvmostrarrecomendacion"        -->
+
+        <TextView
+            android:id="@+id/tvPasosDiarios"
+            style="@style/tvderecomendado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pasos diarios recomendados" />
+
+        <TextView
+            android:id="@+id/tvVisualizaPasos"
+            style="@style/tvmostrarrecomendacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" 1"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/tvKcalDiarios"
+            style="@style/tvderecomendado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kcal diarias recomendadas" />
+        <!--        android:textSize="20sp"-->
+        <!--        android:textColor="@color/blancoApp"-->
+        <!--        android:textStyle="bold"-->
+        <TextView
+            android:id="@+id/tvVisualizaKcal"
+            style="@style/tvmostrarrecomendacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" "
+            tools:ignore="SpeakableTextPresentCheck" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
