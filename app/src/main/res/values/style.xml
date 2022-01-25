@@ -24,4 +24,23 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="strokeColor">@color/verdeApp</item>
     </style>
+
+    <!-- TEXT INPUT LAYOUT -->
+    <!-- TextInputLayout -->
+    <style name="textInputLayout">
+        <item name="android:textColorHint">@color/blancoApp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <!-- EditText -->
+    <style name="editText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:fontFamily">@font/aeonikbold</item>
+        <item name="android:textColorHint">@color/blancoApp</item>
+        <item name="maxLines">1</item>
+        <item name="android:textColor">@color/verdeApp</item>
+    </style>
 </resources>

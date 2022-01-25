@@ -12,13 +12,13 @@
     <TextView
         android:id="@+id/tvStrong"
         android:layout_width="248dp"
-        android:layout_height="76dp"
+        android:layout_height="80dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/bebasneueregular"
         android:gravity="center"
         android:text="STRONG"
         android:textColor="@color/verdeApp"
-        android:textSize="50dp"
+        android:textSize="55dp"
         app:layout_constraintEnd_toStartOf="@+id/GuidelineDerecha"
         app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda"
         app:layout_constraintTop_toTopOf="@+id/GuidelineSuperior"
@@ -27,13 +27,13 @@
     <!-- TextView Registro -->
     <TextView
         android:id="@+id/tvRegistro"
-        android:layout_width="329dp"
-        android:layout_height="72dp"
+        android:layout_width="297dp"
+        android:layout_height="64dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="30dp"
         android:fontFamily="@font/aeonikbold"
-        android:text="Registro"
         android:gravity="left"
+        android:text="Registro"
         android:textColor="@color/blancoApp"
         android:textSize="45dp"
         app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda"
@@ -43,20 +43,16 @@
     <!-- TextInputLayout nombre de usuario -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilNombre"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        style="@style/textInputLayout"
         app:layout_constraintEnd_toStartOf="@+id/GuidelineDerecha"
         app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda"
         app:layout_constraintTop_toBottomOf="@+id/tvRegistro">
 
         <!-- EditText nombre de usuario -->
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:textColor="@color/blancoApp"
+            style="@style/editText"
             android:hint="Nombre de usuario"
-            android:maxLines="1">
+            android:background="@color/transparente">
         </EditText>
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -65,6 +61,7 @@
         android:id="@+id/tilEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:textColorHint="@color/blancoApp"
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toStartOf="@+id/GuidelineDerecha"
         app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda"
@@ -72,17 +69,19 @@
 
         <!-- EditText email -->
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
+            style="@style/editText"
             android:hint="Email"
-            android:maxLines="1">
-        </EditText>
+            android:textColor="@color/verdeApp"
+            android:textColorHint="@color/blancoApp"
+            android:background="@color/transparente"
+            tools:ignore="SpeakableTextPresentCheck"></EditText>
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- TextInputLayout contraseña -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilContraseña"
         android:layout_width="0dp"
+        android:textColorHint="@color/blancoApp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toStartOf="@+id/GuidelineDerecha"
@@ -92,11 +91,15 @@
         <!-- EditText contraseña -->
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:inputType="textPassword"
+            android:layout_height="50dp"
+            android:fontFamily="@font/aeonikbold"
             android:hint="Contraseña"
-            android:maxLines="1">
-        </EditText>
+            android:inputType="textPassword"
+            android:textColorHint="@color/blancoApp"
+            android:background="@color/transparente"
+            android:textColor="@color/verdeApp"
+            android:maxLines="1"
+            tools:ignore="SpeakableTextPresentCheck"></EditText>
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- TextInputLayout repite contraseña -->
@@ -105,6 +108,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:textColorHint="@color/blancoApp"
         app:layout_constraintEnd_toStartOf="@+id/GuidelineDerecha"
         app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda"
         app:layout_constraintTop_toBottomOf="@+id/tilContraseña">
@@ -112,11 +116,15 @@
         <!-- EditText repite contraseña -->
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:inputType="textPassword"
+            android:layout_height="50dp"
+            android:fontFamily="@font/aeonikbold"
             android:hint="Repite contraseña"
-            android:maxLines="1">
-        </EditText>
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:textColorHint="@color/blancoApp"
+            android:background="@color/transparente"
+            android:textColor="@color/verdeApp"
+            tools:ignore="SpeakableTextPresentCheck"></EditText>
     </com.google.android.material.textfield.TextInputLayout>
 
 
