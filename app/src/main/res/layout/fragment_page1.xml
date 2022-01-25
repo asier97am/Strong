@@ -39,6 +39,16 @@
 
     <!--ARRIBA LOS GUIDELINES-->
 
+    <View
+        android:id="@+id/viewAlpha"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradiente"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
     <ImageView
         android:id="@+id/backView"
         android:layout_width="match_parent"
@@ -129,5 +139,6 @@
             android:layout_height="wrap_content"
             android:text=" "
             tools:ignore="SpeakableTextPresentCheck" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

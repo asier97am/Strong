@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="tvderecomendado">
-        <item name="android:textSize">22sp</item>
+        <item name="android:textSize">25sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/blancoApp</item>
     </style>
     <style name="tvmostrarrecomendacion">
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/verdeApp</item>
         <item name="android:layout_marginBottom">60dp </item>
     </style>
@@ -14,7 +14,7 @@
     <!-- Button verde -->
     <style name="botonVerde" >
         <item name="android:backgroundTint">@color/verdeApp</item>
-        <item name="cornerRadius">15dp</item>
+        <item name="cornerRadius">16dp</item>
         <item name="android:state_pressed">true</item>
         <item name="android:textColor">@color/blancoApp</item>
         <item name="fontFamily">@font/aeonikbold</item>
