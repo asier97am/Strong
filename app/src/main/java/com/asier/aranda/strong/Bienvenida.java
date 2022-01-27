@@ -3,6 +3,7 @@ package com.asier.aranda.strong;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 
 public class Bienvenida extends AppCompatActivity {
@@ -13,20 +14,13 @@ public class Bienvenida extends AppCompatActivity {
         setContentView(R.layout.activity_bienvenida);
 
     }
+
+    public void bt1_login_acceder(View view) {
+    }
+
+    public void bt2_login_entrar_como_invitado(View view) {
+    }
+
+    public void tv4_login_registro(View view) {
+    }
 }
-
-  /*  @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-
-        //glide for loading girls
-        ImageView mFondo= findViewById(R.id.fondo);
-
-        Glide.with(this)
-                .load(R.drawable.brazaco)
-                .transition(DrawableTransitionOptions.withCrossFade(400))
-                //.load("https://images.unsplash.com/photo-1459802071246-377c0346da93?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=409&q=80")
-                //.placeholder(new ColorDrawable(this.getResources().getColor(R.color.fucsia)))
-                .into(mFondo);
-    }*/

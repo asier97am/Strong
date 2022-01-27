@@ -117,7 +117,7 @@
     <!-- BOTONES -->
     <!-- Button Acceder -->
     <Button
-        android:id="@+id/bt1"
+        android:id="@+id/bt1_bienvenida_acceder"
         style="@style/botonVerde"
         android:text="REGISTRARSE"
         android:layout_marginBottom="10dp"

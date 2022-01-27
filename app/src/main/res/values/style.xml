@@ -37,11 +37,12 @@
     <!-- EditText -->
     <style name="editText">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_height">55dp</item>
         <item name="android:fontFamily">@font/aeonikbold</item>
         <item name="android:textColorHint">@color/blancoApp</item>
         <item name="maxLines">1</item>
         <item name="android:textColor">@color/verdeApp</item>
+        <item name="android:textSize">17dp</item>
     </style>
 
 </resources>
