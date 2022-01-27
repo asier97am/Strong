@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- TITULO -->
+    <style name="estiloTitulo">
+        <item name="fontFamily">@font/bebasneueregular</item>
+        <item name="android:textColor">@color/verdeApp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">60dp</item>
+        <item name="android:text">@string/app_name</item>
+    </style>
+
     <!-- BOTONES -->
 
     <!-- Button verde -->
@@ -41,6 +50,7 @@
     <!-- Fondo y estilo del contorno de los botones.-->
     <style name="fondoBotones">
         <item name="android:background">@color/negroApp</item>
+        <item name="cornerRadius">20dp</item>
     </style>
 
 
@@ -56,12 +66,11 @@
     <!-- EditText -->
     <style name="editText">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">65dp</item>
+        <item name="android:layout_height">55dp</item>
         <item name="android:fontFamily">@font/aeonikbold</item>
         <item name="android:textColorHint">@color/blancoApp</item>
         <item name="maxLines">1</item>
-
-
+        <item name="android:textSize">17dp</item>
         <item name="android:textColor">@color/verdeApp</item>
         <item name="android:background">@color/transparente</item>
     </style>
