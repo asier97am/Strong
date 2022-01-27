@@ -30,17 +30,19 @@
     <!-- PARTE DE LA SELECCION DE BOTONES-->
     <!-- Seleccion de botones-->
     <style name="seleccionBotones">
-        <item name="android:gravity">center</item>
+        <item name="android:gravity">center_vertical</item>
         <item name="android:drawableRight">@android:drawable/btn_radio</item>
         <item name="android:button">@null</item>
         <item name="android:textColor">@color/verdeApp</item>
         <item name="fontFamily">@font/aeonikbold</item>
+        <item name="android:paddingLeft">10dp</item>
     </style>
 
     <!-- Fondo y estilo del contorno de los botones.-->
     <style name="fondoBotones">
         <item name="android:background">@color/negroApp</item>
     </style>
+
 
     <!-- TEXT INPUT LAYOUT -->
     <!-- TextInputLayout -->
@@ -58,6 +60,8 @@
         <item name="android:fontFamily">@font/aeonikbold</item>
         <item name="android:textColorHint">@color/blancoApp</item>
         <item name="maxLines">1</item>
+
+
         <item name="android:textColor">@color/verdeApp</item>
         <item name="android:background">@color/transparente</item>
     </style>

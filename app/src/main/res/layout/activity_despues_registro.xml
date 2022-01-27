@@ -82,7 +82,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilContraseña"
+        android:id="@+id/tilPeso"
         android:layout_width="0dp"
         android:textColorHint="@color/blancoApp"
         android:layout_height="wrap_content"
@@ -103,6 +103,27 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilAltura"
+        style="@style/textInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/blancoApp"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@id/tilPeso"
+        tools:layout_editor_absoluteY="239dp">
+
+        <EditText
+            android:id="@+id/alturaRegistro"
+            style="@style/editText"
+            android:hint="Altura"
+            android:inputType="number"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <RadioGroup
         android:id="@+id/radioGroup2"
@@ -114,12 +135,13 @@
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"
-        app:layout_constraintTop_toBottomOf="@+id/tilContraseña">
+        app:layout_constraintTop_toBottomOf="@+id/tilAltura">
 
         <RadioButton
             android:id="@+id/radioButton7"
             style="@style/seleccionBotones"
-            android:layout_width="wrap_content"
+            android:layout_width="83dp"
+            android:layout_height="38dp"
             android:layout_weight="1"
             android:text="Hombre" />
 
@@ -153,11 +175,6 @@
         tools:layout_editor_absoluteY="291dp"
         android:layout_marginTop="34dp">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="194dp"
-            android:layout_height="wrap_content"
-            app:helperText="hola"
-            app:helperTextTextColor="@color/white">
 
             <RadioButton
                 android:id="@+id/radioButton"
@@ -165,16 +182,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center"
                 android:text="Soy activo" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:helperText="hola"
-            app:helperTextTextColor="@color/white">
 
             <RadioButton
                 android:id="@+id/radioButton2"
@@ -182,8 +190,6 @@
                 android:layout_width="match_parent"
                 android:layout_weight="1"
                 android:text="Soy principiante" />
-        </com.google.android.material.textfield.TextInputLayout>
-
 
     </RadioGroup>
 
