@@ -8,6 +8,12 @@
     android:background="@drawable/chica_registro">
 
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradiente">
+    </View>
+
     <!-- TextView Strong-->
     <TextView
         android:id="@+id/tvStrong"

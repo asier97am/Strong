@@ -43,4 +43,5 @@
         <item name="maxLines">1</item>
         <item name="android:textColor">@color/verdeApp</item>
     </style>
+
 </resources>

@@ -8,6 +8,14 @@
     style="@style/Theme.AppCompat.DayNight.NoActionBar"
     tools:context=".Bienvenida">
 
+    <!-- View para dar oscuridad -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/negroApp"
+        android:alpha="0.7">
+    </View>
+
     <!-- TextView Strong-->
     <TextView
         android:id="@+id/tvStrong"
