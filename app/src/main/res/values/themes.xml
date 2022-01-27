@@ -18,7 +18,7 @@
     <style name="Theme.SinBarra" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <!-- Color del hint de los textVieww. -->
-        <item name="colorPrimary">@color/negroApp</item>
+        <item name="colorPrimary">@color/verdeApp</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
@@ -41,6 +41,11 @@
     <style name="Theme.SinBarra.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
     <style name="Theme.SinBarra.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="BottomNavigation">
+        <item name="android:background">@color/negroApp</item>
+        <item name="itemIconTint">@color/blancoApp</item>
+        <item name="itemTextColor">@color/white</item>
+    </style>
 
 
 </resources>

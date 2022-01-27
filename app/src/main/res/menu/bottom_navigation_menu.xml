@@ -5,10 +5,11 @@
     <item
         android:id="@+id/favourite"
         android:contentDescription="none"
-        android:icon="@drawable/ic_cuadrados"
+        android:icon="@drawable/ic_favourite_foreground"
         android:title="Favourite"
-        app:showAsAction="always" />
 
+        app:showAsAction="always" />
+<!--    android:iconTint="@color/blancoApp"-->
     <item
         android:id="@+id/add"
         android:contentDescription="none"

@@ -24,6 +24,7 @@ import android.widget.Toast;
 import com.asier.aranda.strong.ui.main.SectionsPagerAdapter;
 import com.asier.aranda.strong.databinding.ActivityMainBnBinding;
 
+
 public class MainBN extends AppCompatActivity {
 
     private ActivityMainBnBinding binding;
@@ -33,6 +34,7 @@ public class MainBN extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //getSupportActionBar().hide();
 
         binding = ActivityMainBnBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
