@@ -117,17 +117,19 @@
     <!-- BOTONES -->
     <!-- Button Acceder -->
     <Button
-        android:id="@+id/bt1_bienvenida_acceder"
+        android:id="@+id/bt1_registro_registrarse"
+        android:onClick="bt1_registro_registrarse"
         style="@style/botonVerde"
         android:text="REGISTRARSE"
         android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/bt2"
+        app:layout_constraintBottom_toTopOf="@+id/bt2_registro_volver_al_login"
         app:layout_constraintEnd_toStartOf="@+id/GuidelineDerecha"
         app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda" />
 
     <!-- Button Registrarse -->
     <Button
-        android:id="@+id/bt2"
+        android:id="@+id/bt2_registro_volver_al_login"
+        android:onClick="bt2_registro_volver_al_login"
         style="@style/botonNegro"
         android:text="VOLVER AL LOGIN"
         app:layout_constraintEnd_toStartOf="@+id/GuidelineDerecha"

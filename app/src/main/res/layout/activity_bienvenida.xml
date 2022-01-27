@@ -88,9 +88,9 @@
     <!-- TextView Registro -->
     <TextView
         android:id="@+id/tv4_bienvenida_registro"
-        android:onClick="tv4_login_registro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="tv4_login_registro"
         android:text="REGISTRO"
         android:textColor="@color/verdeApp"
         app:layout_constraintBottom_toTopOf="@+id/GuidelineInferior"
