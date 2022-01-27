@@ -26,7 +26,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         app:menu="@menu/bottom_navigation_menu"
-        style="@style/BottomNavigation">
-
+        style="@style/BottomNavigation"
+        >
+<!--      -->
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

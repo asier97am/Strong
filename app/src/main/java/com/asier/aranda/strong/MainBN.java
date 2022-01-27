@@ -1,6 +1,7 @@
 package com.asier.aranda.strong;
 
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
@@ -53,6 +54,7 @@ public class MainBN extends AppCompatActivity {
                 switch (item.getItemId()) {
                     case R.id.favourite:
                         item.setChecked(true);
+
                         Toast.makeText(MainBN.this, "Favoroutie clicked.", Toast.LENGTH_SHORT).show();
                         viewPager.setCurrentItem(0);
                         break;
@@ -66,7 +68,6 @@ public class MainBN extends AppCompatActivity {
                         item.setChecked(true);
                         Toast.makeText(MainBN.this, "Browse clicked.", Toast.LENGTH_SHORT).show();
                         viewPager.setCurrentItem(2);
-
                         break;
                     case R.id.profile:
                         item.setChecked(true);
