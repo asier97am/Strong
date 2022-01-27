@@ -5,7 +5,7 @@
     <item
         android:id="@+id/favourite"
         android:contentDescription="none"
-        android:icon="@drawable/ic_favourite_foreground"
+        android:icon="@drawable/ic_cuadrados"
         android:title="Favourite"
         app:showAsAction="always" />
 
