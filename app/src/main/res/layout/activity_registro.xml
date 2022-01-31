@@ -57,6 +57,7 @@
         <!-- EditText nombre de usuario -->
         <EditText
             style="@style/editText"
+            android:id="@+id/etNombreUsuario"
             android:background="@color/transparente"
             android:hint="Nombre de usuario"
             tools:ignore="SpeakableTextPresentCheck"
@@ -74,9 +75,9 @@
         <!-- EditText email -->
         <EditText
             style="@style/editText"
+            android:id="@+id/etEmail"
             android:background="@color/transparente"
             android:hint="Email"
-            tools:ignore="SpeakableTextPresentCheck"
             android:inputType="textEmailAddress"></EditText>
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -91,10 +92,10 @@
         <!-- EditText contraseña -->
         <EditText
             style="@style/editText"
+            android:id="@+id/etContraseña"
             android:background="@color/transparente"
             android:hint="Contraseña"
-            android:inputType="textPassword"
-            tools:ignore="SpeakableTextPresentCheck"></EditText>
+            android:inputType="textPassword"></EditText>
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- TextInputLayout repite contraseña -->
@@ -108,10 +109,10 @@
         <!-- EditText repite contraseña -->
         <EditText
             style="@style/editText"
+            android:id="@+id/etRepiteContraseña"
             android:background="@color/transparente"
             android:hint="Repite contraseña"
-            android:inputType="textPassword"
-            tools:ignore="SpeakableTextPresentCheck"></EditText>
+            android:inputType="textPassword"></EditText>
     </com.google.android.material.textfield.TextInputLayout>
 
 
