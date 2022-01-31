@@ -137,7 +137,7 @@
 
 
     <RadioGroup
-        android:id="@+id/radioGroup2"
+        android:id="@+id/radioGenero"
         style="@style/fondoBotones"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -167,24 +167,24 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/terminaRegistro"
         style="@style/botonVerde"
         android:layout_marginTop="48dp"
         android:text="Aceptar"
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/radioActividad" />
 
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/radioActividad"
         style="@style/fondoBotones"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"
-        app:layout_constraintTop_toBottomOf="@id/radioGroup2"
+        app:layout_constraintTop_toBottomOf="@id/radioGenero"
         tools:layout_editor_absoluteY="291dp"
         android:layout_marginTop="34dp">
 

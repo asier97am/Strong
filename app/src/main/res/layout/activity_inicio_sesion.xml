@@ -40,8 +40,9 @@
         <EditText
             android:id="@+id/emailSesion"
             style="@style/editText"
+            android:maxLines="1"
             android:hint="Email"
-            android:inputType="number"
+            android:inputType="text"
             tools:ignore="SpeakableTextPresentCheck" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -69,8 +70,9 @@
         <EditText
             android:id="@+id/passwordSesion"
             style="@style/editText"
+            android:maxLines="1"
             android:hint="Contraseña"
-            android:inputType="number"
+            android:inputType="textPassword"
             tools:ignore="SpeakableTextPresentCheck" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -108,8 +110,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <Button
-        android:id="@+id/accederComoInvitado"
-
+        android:id="@+id/accionRegistrarse"
         style="@style/botonNegro"
         android:layout_marginTop="20dp"
         android:text="Registrarse"
