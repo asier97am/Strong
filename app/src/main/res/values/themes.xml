@@ -33,7 +33,7 @@
 
 
     <style name="Theme.SinBarra.NoActionBar">
-        <item name="colorOnPrimary">@color/verdeApp</item>
+        <item name="colorOnPrimary">@color/blancoApp</item>
         <item name="colorPrimary">@color/verdeApp</item>
     </style>
 

@@ -11,5 +11,6 @@
     <color name="blancoApp">#FFFFFF</color>
     <color name="negroApp">#232441</color>
     <color name="pruebacoloralpha">#00232441</color>
-    <color name="transparente">#00000000</color>
+<!--    <color name="transparente">#00000000</color>-->
+    <color name="transparente">#22FFFFFF</color>
 </resources>
