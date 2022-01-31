@@ -4,7 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/imangeiniciosesion"
     >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradiant"
+        >
+    </View>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/lineaIzd"
@@ -20,73 +28,63 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.95" />
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilEmail"
+        style="@style/textInputLayout"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        >
+
+        <EditText
+            android:id="@+id/emailSesion"
+            style="@style/editText"
+            android:hint="Email"
+            android:inputType="number"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
     <TextView
         android:id="@+id/textView"
+        android:layout_marginTop="32dp"
+        style="@style/estiloTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/app_name"
-        android:textSize="30dp"
-        android:fontFamily="@font/aeonikair"
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/username"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:ems="10"
-        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="284dp"
-        android:text="Email"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPassword"
+        style="@style/textInputLayout"
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/tilEmail"
+        >
 
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:passwordToggleEnabled="true" />
+        <EditText
+            android:id="@+id/passwordSesion"
+            style="@style/editText"
+            android:hint="Contraseña"
+            android:inputType="number"
+            tools:ignore="SpeakableTextPresentCheck" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="252dp"
-        android:text="Contraseña"
-        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
-        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
-        app:layout_constraintTop_toBottomOf="@+id/username" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="314dp"
         android:layout_height="59dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="84dp"
         android:text="Iniciar Sesion"
         android:textAlignment="center"
         android:textSize="50dp"
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -98,7 +96,7 @@
         android:onClick="passOlvidada"
         android:text="¿Olvidaste tu contraseña?"
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
+        app:layout_constraintTop_toBottomOf="@+id/tilPassword" />
 
     <Button
         android:id="@+id/accederAlHome"
@@ -111,6 +109,7 @@
 
     <Button
         android:id="@+id/accederComoInvitado"
+
         style="@style/botonNegro"
         android:layout_marginTop="20dp"
         android:text="Registrarse"
