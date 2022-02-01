@@ -12,7 +12,6 @@
         <activity
             android:name=".MainBN"
             android:exported="true"
-            android:label="@string/title_activity_main_bn"
             android:theme="@style/Theme.SinBarra.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
