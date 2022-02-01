@@ -12,7 +12,6 @@ import com.asier.aranda.strong.R;
 import com.asier.aranda.strong.fragment.Page1;
 import com.asier.aranda.strong.fragment.Page2;
 import com.asier.aranda.strong.fragment.Page3;
-import com.asier.aranda.strong.fragment.Page4;
 
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
@@ -42,8 +41,6 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
                 return new Page2();
             case 2:
                 return new Page3();
-            case 3:
-                return new Page4();
             default:
                 return null;
         }
@@ -59,7 +56,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        // Show 4 total pages.
-        return 4;
+        // Show 3 total pages.
+        return 3;
     }
 }

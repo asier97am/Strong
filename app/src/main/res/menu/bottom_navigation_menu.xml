@@ -3,30 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/favourite"
+        android:id="@+id/home"
         android:contentDescription="none"
-        android:icon="@drawable/ic_favourite_foreground"
-        android:title="Favourite"
+        android:icon="@drawable/casa"
+        android:title="Home"
         app:showAsAction="always" />
-<!--    android:iconTint="@color/blancoApp"-->
+    <!--    android:iconTint="@color/blancoApp"-->
     <item
-        android:id="@+id/add"
+        android:id="@+id/estadisticas"
         android:contentDescription="none"
-        android:icon="@drawable/ic_add_foreground"
-        android:title="add"
+        android:icon="@drawable/estadisticas"
+        android:title="Estadisticas"
         app:showAsAction="always"></item>
     <item
-        android:id="@+id/browse"
+        android:id="@+id/perfil"
         android:contentDescription="none"
-        android:icon="@drawable/ic_search_foreground"
-        android:title="Browse"
-        app:showAsAction="always"></item>
-    <item
-        android:id="@+id/profile"
-        android:contentDescription="none"
-        android:icon="@drawable/ic_profile_foreground"
+        android:icon="@drawable/account"
         android:title="Profile"
         app:showAsAction="always"></item>
-
-
 </menu>

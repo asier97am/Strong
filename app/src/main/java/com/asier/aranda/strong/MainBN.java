@@ -52,27 +52,21 @@ public class MainBN extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
                 switch (item.getItemId()) {
-                    case R.id.favourite:
+                    case R.id.home:
                         item.setChecked(true);
-
-                        Toast.makeText(MainBN.this, "Favoroutie clicked.", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(MainBN.this, "Add clicked.", Toast.LENGTH_SHORT).show();
+                        //removeBadge(mybottomNavView,item.getItemId());
                         viewPager.setCurrentItem(0);
                         break;
-                    case R.id.add:
+                    case R.id.estadisticas:
                         item.setChecked(true);
-                        Toast.makeText(MainBN.this, "Add clicked.", Toast.LENGTH_SHORT).show();
-                        //removeBadge(mybottomNavView,item.getItemId());
+                        //Toast.makeText(MainBN.this, "Browse clicked.", Toast.LENGTH_SHORT).show();
                         viewPager.setCurrentItem(1);
                         break;
-                    case R.id.browse:
+                    case R.id.perfil:
                         item.setChecked(true);
-                        Toast.makeText(MainBN.this, "Browse clicked.", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(MainBN.this, "Profile clicked.", Toast.LENGTH_SHORT).show();
                         viewPager.setCurrentItem(2);
-                        break;
-                    case R.id.profile:
-                        item.setChecked(true);
-                        Toast.makeText(MainBN.this, "Profile clicked.", Toast.LENGTH_SHORT).show();
-                        viewPager.setCurrentItem(3);
                         break;
                 }
                 return false;
