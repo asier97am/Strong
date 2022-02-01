@@ -205,6 +205,35 @@
                 android:text="Soy principiante" />
 
     </RadioGroup>
+    <TableRow
+        android:id="@+id/TableRow3"
+        style="@style/fondoBotones"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@id/radioActividad">
+
+        <TextView
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center|left"
+            android:text="Entreno habitualmente"
+            android:textColor="@color/blancoApp"
+            android:textSize="10sp"/>
+
+        <TextView
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center|left"
+            android:text="Soy Sedentario"
+            android:textColor="@color/blancoApp"
+            android:textSize="10sp"/>
+    </TableRow>
 
     <Button
         android:id="@+id/button"
