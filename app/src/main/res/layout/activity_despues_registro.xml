@@ -169,7 +169,7 @@
     <Button
         android:id="@+id/terminaRegistro"
         style="@style/botonVerde"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="55dp"
         android:text="Aceptar"
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
         app:layout_constraintHorizontal_bias="0.0"
@@ -205,6 +205,16 @@
                 android:text="Soy principiante" />
 
     </RadioGroup>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_marginTop="20dp"
+        android:text="Volver Atras"
+        style="@style/botonNegro"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@+id/terminaRegistro"
+        tools:layout_editor_absoluteY="721dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Strong">
         <activity
-            android:name=".SistemaLogin"
+            android:name=".DespuesDeRegistro"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".SistemaRecuperacionContraseña" />
+
 
     </application>
 
