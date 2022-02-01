@@ -169,6 +169,22 @@
                     tools:ignore="SpeakableTextPresentCheck"></EditText>
             </com.google.android.material.textfield.TextInputLayout>
 
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilMail"
+                style="@style/textInputLayout"
+                app:layout_constraintEnd_toEndOf="@+id/guideline3"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/tilAltura">
+
+                <EditText
+                    android:id="@+id/etMail"
+                    style="@style/editText"
+                    android:background="@color/transparente"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    tools:ignore="SpeakableTextPresentCheck"></EditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
             <RadioGroup
                 android:id="@+id/radioGroup2"
                 style="@style/fondoBotones"
@@ -179,7 +195,7 @@
 
                 app:layout_constraintEnd_toStartOf="@+id/guideline3"
                 app:layout_constraintStart_toStartOf="@+id/guideline2"
-                app:layout_constraintTop_toBottomOf="@+id/tilAltura">
+                app:layout_constraintTop_toBottomOf="@+id/tilMail">
 
                 <RadioButton
                     android:id="@+id/radioButton7"
@@ -259,19 +275,22 @@
                 android:layout_width="0dp"
                 android:layout_height="150dp"
                 app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/guideline2"
-                app:layout_constraintTop_toBottomOf="@+id/TableRow3">
-            </View>
+                app:layout_constraintTop_toBottomOf="@+id/TableRow3"></View>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
     <Button
         android:id="@+id/btGuardar"
         style="@style/botonVerde"
-        android:layout_width="match_parent"
+        android:layout_width="400dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="60dp"
+        android:gravity="center"
         android:onClick="btGuardar"
         android:text="Guardar"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
