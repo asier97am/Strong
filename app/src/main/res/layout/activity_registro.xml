@@ -74,11 +74,12 @@
 
         <!-- EditText email -->
         <EditText
-            style="@style/editText"
             android:id="@+id/etEmail"
+            style="@style/editText"
             android:background="@color/transparente"
             android:hint="Email"
-            android:inputType="textEmailAddress"></EditText>
+            android:inputType="textEmailAddress"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck"></EditText>
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- TextInputLayout contraseña -->
@@ -92,11 +93,12 @@
 
         <!-- EditText contraseña -->
         <EditText
-            style="@style/editText"
             android:id="@+id/etContraseña"
+            style="@style/editText"
             android:background="@color/transparente"
             android:hint="Contraseña"
-            android:inputType="textPassword"></EditText>
+            android:inputType="textPassword"
+            tools:ignore="SpeakableTextPresentCheck"></EditText>
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- TextInputLayout repite contraseña -->
@@ -110,11 +112,12 @@
 
         <!-- EditText repite contraseña -->
         <EditText
-            style="@style/editText"
             android:id="@+id/etRepiteContraseña"
+            style="@style/editText"
             android:background="@color/transparente"
             android:hint="Repite contraseña"
-            android:inputType="textPassword"></EditText>
+            android:inputType="textPassword"
+            tools:ignore="SpeakableTextPresentCheck"></EditText>
     </com.google.android.material.textfield.TextInputLayout>
 
 
