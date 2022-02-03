@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
+import com.asier.aranda.strong.MainBN;
 import com.asier.aranda.strong.R;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
@@ -65,13 +66,49 @@ public class Page3 extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
+//    @Override
+//    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+//                             Bundle savedInstanceState) {
+//
+//
+//        // Inflate the layout for this fragment
+//        return inflater.inflate(R.layout.fragment3_profile2, container, false);
+//
+//
+//    }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment3_profile2, container, false);
-
-
+        View view = inflater.inflate(R.layout.fragment3_profile2, container, false);
+        ImageView button = (ImageView) view.findViewById(R.id.info);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showAlertDialogButtonClicked(Page3.this);
+            }
+        });
+        return view;
     }
+
+
+
+    public void showAlertDialogButtonClicked(Page3 Page3){
+        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(getContext());
+        builder.setTitle("Información");//TITULO
+        builder.setMessage("Aquí podrás cambiar tus datos por si te equivocaste");//MENSAJITO
+        builder.setIcon(R.drawable.information);//ICONO
+        builder.setCancelable(false);
+        builder.setNeutralButton("skip", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                dialog.dismiss();
+            }
+        });
+        AlertDialog dialog=builder.create();
+        dialog.show();
+    }
+
+
 }

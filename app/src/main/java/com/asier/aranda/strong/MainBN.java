@@ -103,26 +103,4 @@ public class MainBN extends AppCompatActivity {
             }
         });
     }
-
-
-    public void showAlertDialogButtonClicked(MainBN MainBN){
-        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
-        builder.setTitle("Información");//TITULO
-        builder.setMessage("Aquí podrás cambiar tus datos por si te equivocaste");//MENSAJITO
-        builder.setIcon(R.drawable.information);//ICONO
-        builder.setCancelable(false);
-        builder.setNeutralButton("skip", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-
-                dialog.dismiss();
-            }
-        });
-        AlertDialog dialog=builder.create();
-        dialog.show();
-    }
-
-    public void info(ImageView view){
-        showAlertDialogButtonClicked(MainBN.this);
-    }
 }
