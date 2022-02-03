@@ -82,11 +82,13 @@
         android:layout_width="314dp"
         android:layout_height="59dp"
         android:layout_marginTop="84dp"
-        android:text="Iniciar Sesion"
-        android:textAlignment="center"
+        android:fontFamily="@font/aeonikbold"
+        android:gravity="left"
+        android:text="Iniciar Sesion "
+        android:textColor="@color/blancoApp"
         android:textSize="50dp"
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
-        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -95,8 +97,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
+        android:minHeight="48dp"
         android:onClick="passOlvidada"
         android:text="¿Olvidaste tu contraseña?"
+        android:textColor="@color/blancoApp"
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
         app:layout_constraintTop_toBottomOf="@+id/tilPassword" />
 

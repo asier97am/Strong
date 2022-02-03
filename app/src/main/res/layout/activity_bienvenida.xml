@@ -54,14 +54,14 @@
         android:layout_width="290dp"
         android:layout_height="57dp"
         android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
         android:fontFamily="@font/aeonikbold"
-        android:gravity="left"
         android:text="A un paso de alcanzar la vida que siempre has deseado"
         android:textColor="@color/blancoApp"
         android:textSize="18dp"
+        android:gravity="left"
         app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda"
-        app:layout_constraintTop_toBottomOf="@+id/tvRegistro"
-        android:layout_marginStart="20dp"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvRegistro" />
 
     <!-- Button Acceder -->
     <Button
@@ -90,6 +90,7 @@
         android:id="@+id/tv4_bienvenida_registro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:minHeight="48dp"
         android:onClick="tv4_login_registro"
         android:text="REGISTRO"
         android:textColor="@color/verdeApp"
