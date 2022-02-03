@@ -1,5 +1,6 @@
 package com.asier.aranda.strong;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -22,5 +23,16 @@ public class Bienvenida extends AppCompatActivity {
     }
 
     public void tv4_login_registro(View view) {
+    }
+
+    //borrar de aqui
+    //AlertDialog
+    public void myAlert(View view){
+        AlertDialog.Builder MyAlert= new AlertDialog.Builder(this);
+        MyAlert.setTitle("INFORMACIÓN");
+        MyAlert.setMessage("Este cuadro de alerta sirve para informarte de el uso de esta pestaña");
+        MyAlert.setPositiveButton("OKEY", null);
+        AlertDialog dialog= MyAlert.create();
+        dialog.show();
     }
 }
