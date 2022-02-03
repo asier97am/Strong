@@ -1,13 +1,21 @@
 package com.asier.aranda.strong.fragment;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
+import android.widget.Button;
+import android.widget.ImageView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
 import com.asier.aranda.strong.R;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -15,6 +23,8 @@ import com.asier.aranda.strong.R;
  * create an instance of this fragment.
  */
 public class Page3 extends Fragment {
+
+    private ImageView info;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -55,11 +65,13 @@ public class Page3 extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment3_profile2, container, false);
+
+
     }
 }

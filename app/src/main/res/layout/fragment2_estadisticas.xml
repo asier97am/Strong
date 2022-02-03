@@ -2,10 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/Page1"
+    android:id="@+id/Page2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.Page1"
+    tools:context=".fragment.Page2"
     android:background="@drawable/hombredominada">
 
     <androidx.constraintlayout.widget.Guideline

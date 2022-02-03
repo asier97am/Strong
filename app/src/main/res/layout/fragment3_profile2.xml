@@ -15,7 +15,6 @@
         android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
     </ImageView>
 
     <ScrollView
@@ -23,10 +22,10 @@
         android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/Page2"
+            android:id="@+id/Page3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".fragment.Page1">
+            tools:context=".fragment.Page3">
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline2"
@@ -69,7 +68,7 @@
 
             <TextView
                 android:id="@+id/tvPerfil"
-                android:layout_width="297dp"
+                android:layout_width="150dp"
                 android:layout_height="64dp"
                 android:fontFamily="@font/aeonikbold"
                 android:gravity="left"
@@ -78,6 +77,21 @@
                 android:textSize="45sp"
                 app:layout_constraintStart_toStartOf="@+id/guideline2"
                 app:layout_constraintTop_toBottomOf="@+id/guideline4" />
+
+
+            <ImageView
+                android:id="@+id/info"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_info_foreground"
+                app:layout_constraintBottom_toBottomOf="@+id/tvPerfil"
+                app:layout_constraintEnd_toEndOf="@+id/guideline3"
+                app:layout_constraintHorizontal_bias="0.816"
+                app:layout_constraintStart_toEndOf="@id/tvPerfil"
+                app:layout_constraintTop_toTopOf="@+id/guideline4"
+                app:layout_constraintVertical_bias="0.458">
+
+            </ImageView>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilNombre"

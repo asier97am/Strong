@@ -1,18 +1,22 @@
 package com.asier.aranda.strong;
 
 
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.Bundle;
 
+import com.asier.aranda.strong.fragment.Page3;
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationMenuView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 
 import androidx.annotation.IdRes;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -20,6 +24,7 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.asier.aranda.strong.ui.main.SectionsPagerAdapter;
@@ -97,7 +102,27 @@ public class MainBN extends AppCompatActivity {
 
             }
         });
+    }
 
 
+    public void showAlertDialogButtonClicked(MainBN MainBN){
+        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
+        builder.setTitle("Información");//TITULO
+        builder.setMessage("Aquí podrás cambiar tus datos por si te equivocaste");//MENSAJITO
+        builder.setIcon(R.drawable.information);//ICONO
+        builder.setCancelable(false);
+        builder.setNeutralButton("skip", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                dialog.dismiss();
+            }
+        });
+        AlertDialog dialog=builder.create();
+        dialog.show();
+    }
+
+    public void info(ImageView view){
+        showAlertDialogButtonClicked(MainBN.this);
     }
 }
