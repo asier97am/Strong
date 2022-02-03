@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.asier.aranda.strong" >
+    package="com.asier.aranda.strong">
 
     <application
         android:allowBackup="true"
@@ -13,9 +13,19 @@
             android:name=".MainBN"
             android:exported="true"
             android:theme="@style/Theme.SinBarra.NoActionBar" >
+        </activity>
+
+        <activity
+            android:name=".Registro"
+            android:exported="true">
+        </activity>
+
+        <!-- Activity bienvenida-->
+        <activity
+            android:name=".Bienvenida"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

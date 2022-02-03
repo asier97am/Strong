@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/chica_bienvenida"
+    style="@style/Theme.AppCompat.DayNight.NoActionBar"
+    tools:context=".Bienvenida">
+
+    <!-- View para dar oscuridad -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/negroApp"
+        android:alpha="0.75">
+    </View>
+
+    <!-- TextView Strong-->
+    <TextView
+        android:id="@+id/tvStrong"
+        android:layout_width="248dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/bebasneueregular"
+        android:gravity="center"
+        android:text="STRONG"
+        android:textColor="@color/verdeApp"
+        android:textSize="60dp"
+        app:layout_constraintEnd_toStartOf="@+id/GuidelineDerecha"
+        app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda"
+        app:layout_constraintTop_toTopOf="@+id/GuidelineSuperior"
+        tools:ignore="MissingConstraints" />
+
+
+    <!-- TextView Bienvenido -->
+    <TextView
+        android:id="@+id/tvRegistro"
+        android:layout_width="329dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/aeonikbold"
+        android:text="Bienvenido"
+        android:gravity="left"
+        android:textColor="@color/blancoApp"
+        android:textSize="55dp"
+        app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda"
+        app:layout_constraintTop_toBottomOf="@+id/tvStrong" />
+
+    <!-- TextView Texto (a un paso...) -->
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="290dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/aeonikbold"
+        android:gravity="left"
+        android:text="A un paso de alcanzar la vida que siempre has deseado"
+        android:textColor="@color/blancoApp"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda"
+        app:layout_constraintTop_toBottomOf="@+id/tvRegistro"
+        android:layout_marginStart="20dp"/>
+
+    <!-- Button Acceder -->
+    <Button
+        android:id="@+id/bt1_bienvenida_acceder"
+        android:onClick="bt1_login_acceder"
+        style="@style/botonVerde"
+        android:text="ACCEDER"
+        app:layout_constraintEnd_toStartOf="@+id/GuidelineDerecha"
+        app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda"
+        app:layout_constraintTop_toBottomOf="@+id/tv3"
+        android:layout_marginTop="110dp"/>
+
+    <!-- Button Entrar como invitado -->
+    <Button
+        android:id="@+id/bt2_bienvenida_entrar_como_invitado"
+        android:onClick="bt2_login_entrar_como_invitado"
+        style="@style/botonNegro"
+        android:text="ENTRAR COMO INVITADO"
+        app:layout_constraintEnd_toStartOf="@+id/GuidelineDerecha"
+        app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda"
+        app:layout_constraintTop_toBottomOf="@+id/bt1_bienvenida_acceder"
+        android:layout_marginTop="15dp"/>
+
+    <!-- TextView Registro -->
+    <TextView
+        android:id="@+id/tv4_bienvenida_registro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="tv4_login_registro"
+        android:text="REGISTRO"
+        android:textColor="@color/verdeApp"
+        app:layout_constraintBottom_toTopOf="@+id/GuidelineInferior"
+        app:layout_constraintEnd_toStartOf="@+id/GuidelineDerecha"
+        app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda" />
+
+
+    <!-- GUIDELINES -->
+    <!-- Guideline Izquierda-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GuidelineIzquierda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <!-- Guideline Derecha-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GuidelineDerecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <!-- Guideline Superior-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GuidelineSuperior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <!-- Guideline Inferior-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GuidelineInferior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+</androidx.constraintlayout.widget.ConstraintLayout>
