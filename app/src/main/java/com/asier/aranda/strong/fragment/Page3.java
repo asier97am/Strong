@@ -92,7 +92,6 @@ public class Page3 extends Fragment {
     }
 
 
-
     public void showAlertDialogButtonClicked(Page3 Page3){
         MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(getContext());
         builder.setTitle("Información");//TITULO
