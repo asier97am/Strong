@@ -1,6 +1,10 @@
 Prototipo Adobe XD
+<<<<<<< HEAD
 
 <a title="Strong" href="https://xd.adobe.com/view/ff1fc9eb-0c84-4b65-a7fb-ee32a6205217-aa4c/" alt="AdobeXD" /><img src="img/image.png"></a>
+=======
+https://xd.adobe.com/view/ff1fc9eb-0c84-4b65-a7fb-ee32a6205217-aa4c/
+>>>>>>> origin/Wilson
 
 Trello
 https://trello.com/b/c9nF1cWm/strong
