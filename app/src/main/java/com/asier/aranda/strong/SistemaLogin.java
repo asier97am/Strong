@@ -35,7 +35,7 @@ public class SistemaLogin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(comprobacionUsuario(usuario.getText().toString(), password.getText().toString())){
-                    intent = new Intent(getApplicationContext(), MainActivity.class);
+                   // intent = new Intent(getApplicationContext(), MainActivity.class);
                     startActivity(intent);
 
                 }else {
