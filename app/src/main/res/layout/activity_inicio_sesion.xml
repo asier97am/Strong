@@ -41,8 +41,8 @@
             android:id="@+id/emailSesion"
             style="@style/editText"
             android:maxLines="1"
-            android:hint="Email"
-            android:inputType="text"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
             tools:ignore="SpeakableTextPresentCheck" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -71,7 +71,7 @@
             android:id="@+id/passwordSesion"
             style="@style/editText"
             android:maxLines="1"
-            android:hint="Contraseña"
+            android:hint="@string/contrasenia"
             android:inputType="textPassword"
             tools:ignore="SpeakableTextPresentCheck" />
 
@@ -83,10 +83,10 @@
         android:layout_height="59dp"
         android:layout_marginTop="84dp"
         android:fontFamily="@font/aeonikbold"
-        android:gravity="left"
-        android:text="Iniciar Sesion "
+        android:gravity="start"
+        android:text="@string/iniciar_sesion"
         android:textColor="@color/blancoApp"
-        android:textSize="50dp"
+        android:textSize="50sp"
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"
@@ -99,7 +99,7 @@
         android:layout_marginTop="12dp"
         android:minHeight="48dp"
         android:onClick="passOlvidada"
-        android:text="¿Olvidaste tu contraseña?"
+        android:text="@string/olvidaste_tu_contrasenia"
         android:textColor="@color/blancoApp"
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
         app:layout_constraintTop_toBottomOf="@+id/tilPassword" />
@@ -108,16 +108,17 @@
         android:id="@+id/accederAlHome"
         style="@style/botonVerde"
         android:layout_marginTop="46dp"
-        android:text="Acceder"
+        android:text="@string/acceder"
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/accionRegistrarse"
         style="@style/botonNegro"
         android:layout_marginTop="20dp"
-        android:text="Registrarse"
+        android:text="@string/registrarse"
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"

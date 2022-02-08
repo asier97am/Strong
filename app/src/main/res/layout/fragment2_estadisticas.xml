@@ -53,7 +53,8 @@
         android:id="@+id/backView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintStart_toStartOf="parent"></ImageView>
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/todo"></ImageView>
 
     <TextView
         android:id="@+id/tvBienvenida"
@@ -61,7 +62,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:layout_marginTop="45dp"
-        android:text="Hola,"
+        android:text="@string/hola"
         android:textColor="@color/verdeApp"
         android:textSize="25sp"
         android:textStyle="bold"
@@ -74,7 +75,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="45dp"
-        android:text="NombreUsuario"
+        android:text="@string/nombreusuario"
         android:textColor="@color/blancoApp"
         android:textSize="25sp"
         android:textStyle="bold"
@@ -97,15 +98,15 @@
             style="@style/tvderecomendado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Peso ideal recomendado" />
+            android:text="@string/peso_ideal_recomendado" />
         <!--        style="@style/tv_De_Recomendado"-->
         <TextView
             android:id="@+id/tvVisualizaPeso"
             style="@style/tvmostrarrecomendacion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=" "
-            tools:ignore="SpeakableTextPresentCheck" />
+            android:text=""
+            tools:ignore="SpeakableTextPresentCheck,TextContrastCheck,TextContrastCheck" />
         <!-- style="@styles/tvmostrarrecomendacion"        -->
 
         <TextView
@@ -113,14 +114,14 @@
             style="@style/tvderecomendado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pasos diarios recomendados" />
+            android:text="@string/pasos_diarios_recomendados" />
 
         <TextView
             android:id="@+id/tvVisualizaPasos"
             style="@style/tvmostrarrecomendacion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=" "
+            android:text=""
             tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
@@ -128,7 +129,7 @@
             style="@style/tvderecomendado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Kcal diarias recomendadas" />
+            android:text="@string/kcal_diarias_recomendadas" />
         <!--        android:textSize="20sp"-->
         <!--        android:textColor="@color/blancoApp"-->
         <!--        android:textStyle="bold"-->
@@ -137,7 +138,7 @@
             style="@style/tvmostrarrecomendacion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=" "
+            android:text=""
             tools:ignore="SpeakableTextPresentCheck" />
 
     </LinearLayout>

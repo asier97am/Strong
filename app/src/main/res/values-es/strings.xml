@@ -1,10 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">Strong</string>
-    <string name="title_activity_main_bn" translatable="false">MainBN</string>
-    <string name="tab_text_1" translatable="false">Tab 1</string>
-    <string name="tab_text_2" translatable="false">Tab 2</string>
+    <string name="app_name">Strong</string>
     <string name="bienvenido">Bienvenido</string>
-    <string name="a_un_paso_de_alcanzar_la_vida_que_siempre_has_deseado" translatable="false">A un paso de alcanzar la vida que siempre has deseado</string>
     <string name="acceder">ACCEDER</string>
     <string name="entrar_como_invitado">ENTRAR COMO INVITADO</string>
     <string name="registro">REGISTRO</string>
@@ -17,7 +14,6 @@
     <string name="iniciar_sesion">Iniciar Sesión</string>
     <string name="olvidaste_tu_contrasenia">¿Olvidaste tu contraseña?</string>
     <string name="registrarse">Registrarse</string>
-    <string name="strong" translatable="false">STRONG</string>
     <string name="repite_contrasenia">Repite contraseña</string>
     <string name="volver_al_login">VOLVER AL LOGIN</string>
     <string name="hola">Hola,</string>

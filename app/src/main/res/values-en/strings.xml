@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Strong</string>
+    <string name="bienvenido">Welcome</string>
+    <string name="acceder">ENTER</string>
+    <string name="entrar_como_invitado">enter as a Guest</string>
+    <string name="registro">Register</string>
+    <string name="aceptar">Accept</string>
+    <string name="sobre_ti">About you</string>
+    <string name="string_soy_sedentario">I\'m sedentary</string>
+    <string name="introduzca_sus_datos">Enter your information</string>
+    <string name="volver_atras">Go Back</string>
+    <string name="contrasenia">Password</string>
+    <string name="iniciar_sesion">Login in</string>
+    <string name="olvidaste_tu_contrasenia">Forgot your password?</string>
+    <string name="registrarse">Sign up</string>
+    <string name="repite_contrasenia">Repeat password</string>
+    <string name="volver_al_login">COMEBACK TO LOGIN</string>
+    <string name="hola">Hello,</string>
+    <string name="perfil">Profile</string>
+    <string name="nombreusuario">UserName</string>
+    <string name="peso_ideal_recomendado">Recommended ideal weight</string>
+    <string name="pasos_diarios_recomendados">Recommended daily steps</string>
+    <string name="kcal_diarias_recomendadas">Recommended daily kcal</string>
+    <string name="fondo">background</string>
+    <string name="nombre_de_usuario">Username</string>
+    <string name="apellidos">Last name</string>
+    <string name="edad">Age</string>
+    <string name="altura">Height</string>
+    <string name="peso">Weight</string>
+    <string name="email">Email</string>
+    <string name="hombre">Man</string>
+    <string name="mujer">Woman</string>
+    <string name="soy_activo">Sports active</string>
+    <string name="soy_principiante">I am a beginner</string>
+    <string name="entreno_habitualmente">" I usually train."</string>
+    <string name="soy_sedentario">I\'m sedentary</string>
+    <string name="guardar">Save</string>
+    <string name="todo">ALL</string>
+    <string name="pagina_de_recuperacion_de_contrase_a">Password Recovery Page</string>
+</resources>
