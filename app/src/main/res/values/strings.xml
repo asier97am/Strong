@@ -3,4 +3,25 @@
     <string name="title_activity_main_bn">MainBN</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
+    <string name="strong">STRONG</string>
+    <string name="bienvenido">Bienvenido</string>
+    <string name="a_un_paso_de_alcanzar_la_vida_que_siempre_has_deseado">A un paso de alcanzar la vida que siempre has deseado</string>
+    <string name="acceder">ACCEDER</string>
+    <string name="entrar_como_invitado">ENTRAR COMO INVITADO</string>
+    <string name="registro">REGISTRO</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="entreno_habitualmente">Entreno habitualmente</string>
+    <string name="sobre_ti">Sobre ti</string>
+    <string name="mujer">Mujer</string>
+    <string name="soy_sedentario">Soy Sedentario</string>
+    <string name="string_soy_sedentario" />
+    <string name="introduzca_sus_datos">Introduzca sus datos</string>
+    <string name="soy_principiante">Soy principiante</string>
+    <string name="edad">Edad</string>
+    <string name="peso">Peso</string>
+    <string name="altura">Altura</string>
+    <string name="hombre">Hombre</string>
+    <string name="soy_activo">Soy activo</string>
+    <string name="volver_atras">Volver Atras</string>
+    <string name="todo">TODO</string>
 </resources>
