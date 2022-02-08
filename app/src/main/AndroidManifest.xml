@@ -9,15 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Strong1">
-
-        <!-- Activity registro-->
+        <activity
+            android:name=".Animation"
+            android:exported="true" />
+        <!-- Activity registro -->
         <activity
             android:name=".Registro"
-            android:exported="true">
-
-        </activity>
-
-        <!-- Activity bienvenida-->
+            android:exported="true"></activity> <!-- Activity bienvenida -->
         <activity
             android:name=".Bienvenida"
             android:exported="true">
