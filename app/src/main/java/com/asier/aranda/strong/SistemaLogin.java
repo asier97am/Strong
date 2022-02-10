@@ -9,6 +9,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.asier.aranda.strong.fragment.Page1;
+
 public class SistemaLogin extends AppCompatActivity {
     EditText usuario, password;
     Button accionAccederAlHome, accionRegistrarse;
@@ -16,7 +18,7 @@ public class SistemaLogin extends AppCompatActivity {
     Intent intent;
 
     //Usuario de prueba
-    String usuarioAdmin = "admin", passwordAdmin = "admin";
+    String usuarioAdmin = "admin@gmail.com", passwordAdmin = "admin";
     // -------
 
     @Override
@@ -34,20 +36,25 @@ public class SistemaLogin extends AppCompatActivity {
         accionAccederAlHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(comprobacionUsuario(usuario.getText().toString(), password.getText().toString())){
-                   // intent = new Intent(getApplicationContext(), MainActivity.class);
-                    startActivity(intent);
 
-                }else {
-                    Toast.makeText(getApplicationContext(), "Usuario o contraseña no coinciden", Toast.LENGTH_LONG).show();
-                }
+                Intent intent=new Intent(SistemaLogin.this, MainBN.class);
+                startActivity(intent);
+//                if(comprobacionUsuario(usuario.getText().toString(), password.getText().toString())){
+//                    Intent intent=new Intent(SistemaLogin.this, MainBN.class);
+//                    startActivity(intent);
+//
+//                }else {
+//                    Toast.makeText(getApplicationContext(), "Usuario o contraseña no coinciden", Toast.LENGTH_LONG).show();
+//                }
             }
         });
+
 
         accionRegistrarse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+                Intent intent=new Intent(SistemaLogin.this, Registro.class);
+                startActivity(intent);
             }
         });
     }

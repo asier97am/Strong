@@ -232,6 +232,7 @@
             android:layout_width="185dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
+            android:layout_marginBottom="5dp"
             android:gravity="center|start"
             android:text="@string/string_soy_sedentario"
             android:textColor="@color/blancoApp"
@@ -239,9 +240,10 @@
     </TableRow>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/volverAtras"
         android:layout_marginTop="20dp"
         android:text="@string/volver_atras"
+        android:onClick="volverAtras"
         style="@style/botonNegro"
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"
