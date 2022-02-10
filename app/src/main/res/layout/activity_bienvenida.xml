@@ -9,14 +9,16 @@
     tools:context=".Bienvenida">
 
     <!-- View para dar oscuridad -->
+
+    <!-- TextView Strong-->
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:alpha="0.75"
         android:background="@color/negroApp"
-        android:alpha="0.75">
-    </View>
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"></View>
 
-    <!-- TextView Strong-->
     <TextView
         android:id="@+id/tvStrong"
         android:layout_width="248dp"
