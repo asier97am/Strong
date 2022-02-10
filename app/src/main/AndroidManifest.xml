@@ -15,23 +15,25 @@
             android:theme="@style/Theme.SinBarra.NoActionBar" >
         </activity>
 
+        <!-- Activity animacion splash screen -->
         <activity
-            android:name=".DespuesDeRegistro"
-            android:exported="true">
-        </activity>
-        <activity
-            android:name=".Registro"
-            android:exported="true">
-        </activity>
-        <!-- Activity bienvenida-->
-        <activity
-            android:name=".Bienvenida"
+            android:name=".Animation"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <!-- Activity registro -->
+        <activity
+            android:name=".Registro"
+            android:exported="true">
+        </activity> <!-- Activity bienvenida -->
+        <activity
+            android:name=".Bienvenida"
+            android:exported="true">
         </activity>
     </application>
 
