@@ -7,21 +7,31 @@
     tools:context=".Animation"
     android:background="@color/negroApp">
 
+
+    <!-- ImageView1 foto1 -->
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="32dp"
+        android:src="@mipmap/ic_logo2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
+
     <TextView
         android:id="@+id/tv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="180dp"
         android:fontFamily="@font/bebasneueregular"
         android:text="STRONG"
         android:textColor="@color/verdeApp"
-        android:textSize="100sp"
+        android:textSize="90sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.331"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
-    <!-- ImageView1 foto1 -->
     <ImageView
         android:id="@+id/iv1"
         android:layout_width="250dp"

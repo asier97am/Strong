@@ -77,7 +77,7 @@ public class Animation extends AppCompatActivity {
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);//limpiamos para no poder volver
                 startActivity(intent);//con esto vamos al siguiente activity indicando con la variable intent
             }
-        }, 2997);//tarda 2997 milisegundos en pasar al siguiente activity
+        }, 2500);//tarda 2997 milisegundos en pasar al siguiente activity
     }
 
 }
