@@ -10,7 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Strong1">
 
-        <!-- Activity animacion splash screen -->
+
+        <!-- Activity animacion Splash Screen -->
         <activity
             android:name=".Animation"
             android:exported="true">
