@@ -9,12 +9,14 @@ import android.widget.RadioGroup;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.asier.aranda.strong.BDPersona.DataPersona;
+
 
 public class DespuesDeRegistro extends AppCompatActivity {
     EditText edad, peso, altura;
     RadioGroup actividad, genero;
     Button accionTerminaRegistro;
-    GestionPersona persona;
+
     RadioButton generoHombre, generoMujer, actividadPrincipiante, actividadActivo;
     String datoActividad, datoGenero;
 
@@ -22,6 +24,9 @@ public class DespuesDeRegistro extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_despues_registro);
+
+         DataPersona bbdd = new DataPersona(DespuesDeRegistro.this);
+
 
         // VARIABLES
         edad = findViewById(R.id.edadDespRegistro);

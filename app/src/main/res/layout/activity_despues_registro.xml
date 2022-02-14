@@ -17,12 +17,12 @@
 
 
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:alpha="0.45"
-        android:background="@drawable/imagendespuesregistro">
-    </ImageView>
+<!--    <ImageView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:alpha="0.45"-->
+<!--        android:background="@drawable/imagendespuesregistro">-->
+<!--    </ImageView>-->
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/lineaIzd"
