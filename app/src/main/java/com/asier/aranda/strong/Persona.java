@@ -1,6 +1,7 @@
 package com.asier.aranda.strong;
 
 public class Persona {
+    private String identificador;
     private String email;
     private String password;
     private String username;
@@ -10,11 +11,11 @@ public class Persona {
     private Float peso;
     private Float altura;
 
-    private boolean genero;
-    private boolean actividad;
+    private String genero;
+    private String actividad;
 
 
-    public Persona(String email, String password, String username, String apellido, int edad, Float peso, Float altura, boolean genero, boolean actividad) {
+    public Persona(String email, String password, String username, String apellido, int edad, Float peso, Float altura, String genero, String actividad, String identificador) {
         this.email = email;
         this.password = password;
         this.username = username;
@@ -24,6 +25,7 @@ public class Persona {
         this.altura = altura;
         this.genero = genero;
         this.actividad = actividad;
+        this.identificador = identificador;
     }
 
     public Persona(){}
@@ -85,20 +87,28 @@ public class Persona {
         this.altura = altura;
     }
 
-    public boolean isGenero() {
+    public String getGenero() {
         return genero;
     }
 
-    public void setGenero(boolean genero) {
+    public void setGenero(String genero) {
         this.genero = genero;
     }
 
-    public boolean isActividad() {
+    public String getActividad() {
         return actividad;
     }
 
-    public void setActividad(boolean actividad) {
+    public void setActividad(String actividad) {
         this.actividad = actividad;
+    }
+
+    public String getIdentificador() {
+        return identificador;
+    }
+
+    public void setIdentificador(String identificador) {
+        this.identificador = identificador;
     }
 
     //FIN GETTERS Y SETTERS

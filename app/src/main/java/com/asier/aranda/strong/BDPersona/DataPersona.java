@@ -1,6 +1,8 @@
 package com.asier.aranda.strong.BDPersona;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -47,5 +49,62 @@ public class DataPersona extends SQLiteOpenHelper {
             db.close();
         }
     }
+
+    public Persona acabarSobreTi(Persona p){
+        SQLiteDatabase db = getWritableDatabase();
+
+        db.execSQL("UPDATE t_persona SET edad = " + p.getEdad() +", peso = " + p.getPeso() + ", altura = "
+                + p.getAltura() + ", genero = '" + p.getGenero() + "', actividad = '" + p.getActividad()
+                + "' where id = " + p.getIdentificador());
+
+        db.close();
+
+        return p;
+    }
+
+    @SuppressLint("Range")
+    public Persona busquedaDatosPersona(String id){
+
+        Persona p = new Persona();
+        SQLiteDatabase db = getWritableDatabase();
+
+        String dato = "";
+        Cursor cursor = db.rawQuery("select * from t_almacen where id = " + id, null);
+
+        cursor.moveToFirst();
+
+        dato = cursor.getString(cursor.getColumnIndex("id"));
+        p.setIdentificador(dato);
+
+        dato = cursor.getString(cursor.getColumnIndex("correo"));
+        p.setEmail(dato);
+
+        dato = cursor.getString(cursor.getColumnIndex("apellido"));
+        p.setApellido(dato);
+
+        dato = cursor.getString(cursor.getColumnIndex("nombre"));
+        p.setUsername(dato);
+
+        dato = cursor.getString(cursor.getColumnIndex("password"));
+        p.setPassword(dato);
+
+        dato = cursor.getString(cursor.getColumnIndex("altura"));
+        p.setAltura(Float.parseFloat(dato));
+
+        dato = cursor.getString(cursor.getColumnIndex("peso"));
+        p.setPeso(Float.parseFloat(dato));
+
+        dato = cursor.getString(cursor.getColumnIndex("genero"));
+        p.setGenero(dato);
+
+        dato = cursor.getString(cursor.getColumnIndex("actividad"));
+        p.setActividad(dato);
+
+        cursor.close();
+
+        return p;
+
+    }
+
 
 }
