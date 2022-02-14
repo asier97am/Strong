@@ -17,7 +17,7 @@
 
         <!-- Activity animacion splash screen -->
         <activity
-            android:name=".Animation"
+            android:name=".DespuesDeRegistro"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,7 +37,7 @@
 
         <!-- Activity DespuesRegistro -->
         <activity
-            android:name=".DespuesDeRegistro"
+            android:name=".Animation"
             android:exported="true"></activity>
 
         <!-- Activity Login -->
