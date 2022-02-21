@@ -6,7 +6,9 @@
     android:id="@+id/scrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     >
+
 
 <androidx.constraintlayout.widget.ConstraintLayout
 
@@ -15,12 +17,13 @@
     android:background="@color/black">
 
     <ImageView
+        android:id="@+id/imagenDespRegistro"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
         android:alpha="0.45"
-        android:background="@drawable/imagendespuesregistro"
-        android:contentDescription="@string/todo">
-    </ImageView>
+        />
+
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/lineaIzd"
