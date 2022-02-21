@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
@@ -21,6 +22,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 public class Page3 extends Fragment {
 
     private ImageView info;
+    private Button btGuardar;
 
     public Page3() {
         // Required empty public constructor
@@ -63,6 +65,11 @@ public class Page3 extends Fragment {
         });
         AlertDialog dialog=builder.create();
         dialog.show();
+    }
+
+    public void btGuardar (View view){
+        Toast.makeText(getContext(), "SAVE", Toast.LENGTH_SHORT).show();
+
     }
 
 
