@@ -6,31 +6,53 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_logo2"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_logo2"
+        android:roundIcon="@mipmap/ic_logo2_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Strong1">
+        android:theme="@style/Theme.SinBarra">
+        <!-- BN-->
+        <activity
+            android:name=".MainBN"
+            android:exported="true"
+            android:theme="@style/Theme.SinBarra.NoActionBar"></activity>
 
 
         <!-- Activity animacion Splash Screen -->
         <activity
-            android:name=".Animation"
+            android:name=".DespuesDeRegistro"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
+        <!-- Activity bienvenida -->
+        <activity
+            android:name=".Bienvenida"
+            android:exported="true"></activity>
+
         <!-- Activity registro -->
         <activity
             android:name=".Registro"
-            android:exported="true"></activity> <!-- Activity bienvenida -->
-        <activity
-            android:name=".Bienvenida"
-            android:exported="true">
+            android:exported="true"></activity>
 
-        </activity>
+        <!-- Activity DespuesRegistro -->
+        <activity
+            android:name=".Animation"
+            android:exported="true"></activity>
+
+        <!-- Activity Login -->
+        <activity
+            android:name=".SistemaLogin"
+            android:exported="true"></activity>
+
+        <!-- Activity RecuperacionPassword -->
+        <activity
+            android:name=".SistemaRecuperacionContraseña"
+            android:exported="true"></activity>
+
+
+
     </application>
 
 </manifest>

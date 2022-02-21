@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/backView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/prueba"
+        android:contentDescription="@string/fondo"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </ImageView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/Page3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".fragment.Page3">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.05" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.95" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.05" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.95" />
+
+            <View
+                android:id="@+id/viewAlpha"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradiente"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tvPerfil"
+                android:layout_width="150dp"
+                android:layout_height="64dp"
+                android:fontFamily="@font/aeonikbold"
+                android:gravity="start"
+                android:text="@string/perfil"
+                android:textColor="@color/blancoApp"
+                android:textSize="45sp"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/guideline4" />
+
+
+            <ImageView
+                android:id="@+id/info"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_info_foreground"
+                app:layout_constraintBottom_toBottomOf="@+id/tvPerfil"
+                app:layout_constraintEnd_toEndOf="@+id/guideline3"
+                app:layout_constraintHorizontal_bias="0.816"
+                app:layout_constraintStart_toEndOf="@id/tvPerfil"
+                app:layout_constraintTop_toTopOf="@+id/guideline4"
+                app:layout_constraintVertical_bias="0.458"
+                android:contentDescription="@string/todo">
+
+            </ImageView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilNombre"
+                style="@style/textInputLayout"
+                android:layout_marginTop="80dp"
+                app:layout_constraintEnd_toEndOf="@+id/guideline3"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/guideline4">
+
+                <!-- EditText nombre de usuario -->
+                <EditText
+                    android:id="@+id/etNombre"
+                    style="@style/editText"
+                    android:background="@color/transparente"
+                    android:hint="@string/nombre_de_usuario"
+                    android:inputType="text"
+                    tools:ignore="SpeakableTextPresentCheck"></EditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- TextInputLayout email -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilApellidos"
+                style="@style/textInputLayout"
+                app:layout_constraintEnd_toEndOf="@+id/guideline3"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/tilNombre">
+
+                <!-- EditText email -->
+                <EditText
+                    android:id="@+id/etApellidos"
+                    style="@style/editText"
+                    android:background="@color/transparente"
+                    android:hint="@string/apellidos"
+                    android:inputType="textEmailAddress"
+                    tools:ignore="SpeakableTextPresentCheck"></EditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- TextInputLayout contraseña -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilEdad"
+                style="@style/textInputLayout"
+                app:layout_constraintEnd_toEndOf="@+id/guideline3"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/tilApellidos">
+
+                <!-- EditText contraseña -->
+                <EditText
+                    android:id="@+id/etEdad"
+                    style="@style/editText"
+                    android:background="@color/transparente"
+                    android:hint="@string/edad"
+                    android:inputType="number"
+                    tools:ignore="SpeakableTextPresentCheck"></EditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- TextInputLayout repite contraseña -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPeso"
+                style="@style/textInputLayout"
+                app:layout_constraintEnd_toEndOf="@+id/guideline3"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/tilEdad">
+
+                <!-- EditText repite contraseña -->
+                <EditText
+                    android:id="@+id/etPeso"
+                    style="@style/editText"
+                    android:background="@color/transparente"
+                    android:hint="@string/peso"
+                    android:inputType="numberDecimal"
+                    tools:ignore="SpeakableTextPresentCheck"></EditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- TextInputLayout repite contraseña -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilAltura"
+                style="@style/textInputLayout"
+                app:layout_constraintEnd_toEndOf="@+id/guideline3"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/tilPeso">
+
+                <!-- EditText repite contraseña -->
+                <EditText
+                    android:id="@+id/etAltura"
+                    style="@style/editText"
+                    android:background="@color/transparente"
+                    android:hint="@string/altura"
+                    android:inputType="numberDecimal"
+                    tools:ignore="SpeakableTextPresentCheck"></EditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilMail"
+                style="@style/textInputLayout"
+                app:layout_constraintEnd_toEndOf="@+id/guideline3"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/tilAltura">
+
+                <EditText
+                    android:id="@+id/etMail"
+                    style="@style/editText"
+                    android:background="@color/transparente"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    tools:ignore="SpeakableTextPresentCheck"></EditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RadioGroup
+                android:id="@+id/radioGroup2"
+                style="@style/fondoBotones"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal"
+
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/tilMail">
+
+                <RadioButton
+                    android:id="@+id/radioButton7"
+                    style="@style/seleccionBotones"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/hombre" />
+
+                <RadioButton
+                    android:id="@+id/radioButton8"
+                    style="@style/seleccionBotones"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/mujer" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                style="@style/fondoBotones"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@id/radioGroup2">
+
+                <RadioButton
+                    android:id="@+id/radioButton1"
+                    style="@style/seleccionBotones"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/soy_activo" />
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    style="@style/seleccionBotones"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/soy_principiante" />
+
+            </RadioGroup>
+
+            <TableRow
+                android:id="@+id/TableRow3"
+                style="@style/fondoBotones"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@id/radioGroup">
+
+                <TextView
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center|start"
+                    android:text="@string/entreno_habitualmente"
+                    android:textColor="@color/blancoApp"
+                    android:textSize="11sp"
+                    tools:ignore="TextContrastCheck"></TextView>
+
+                <TextView
+                    android:layout_width="185dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center|start"
+                    android:text="@string/soy_sedentario"
+                    android:textColor="@color/blancoApp"
+                    android:textSize="11sp"
+                    tools:ignore="TextContrastCheck"></TextView>
+            </TableRow>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/TableRow3"></View>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btGuardar"
+        style="@style/botonVerde"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:gravity="center"
+        android:onClick="btGuardar"
+        android:text="@string/guardar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

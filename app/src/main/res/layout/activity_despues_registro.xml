@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.45"
+        android:background="@drawable/imagendespuesregistro"
+        android:contentDescription="@string/todo">
+    </ImageView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/lineaIzd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/lineaDerecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        style="@style/estiloTitulo"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/sobre_ti"
+        android:gravity="start"
+        android:textColor="@color/blancoApp"
+        android:textSize="55sp"
+        android:fontFamily="@font/aeonikbold"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="20dp"
+        android:text="@string/introduzca_sus_datos"
+        android:textColor="@color/blancoApp"
+        android:fontFamily="@font/aeonikregular"
+        android:textSize="16sp"
+        android:gravity="start"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilEdad"
+        android:layout_width="0dp"
+        android:textColorHint="@color/blancoApp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        style="@style/textInputLayout"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@+id/textView9">
+
+        <EditText
+            android:id="@+id/edadDespRegistro"
+            style="@style/editText"
+            android:hint="@string/edad"
+            android:inputType="number"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPeso"
+        android:layout_width="0dp"
+        android:textColorHint="@color/blancoApp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        style="@style/textInputLayout"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@+id/tilEdad">
+
+        <EditText
+            android:id="@+id/pesoDesRegistro"
+            style="@style/editText"
+            android:hint="@string/peso"
+            android:inputType="number"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilAltura"
+        style="@style/textInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/blancoApp"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@id/tilPeso">
+
+        <EditText
+            android:id="@+id/alturaRegistro"
+            style="@style/editText"
+            android:hint="@string/altura"
+            android:inputType="number"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <RadioGroup
+        android:id="@+id/radioGenero"
+        style="@style/fondoBotones"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@+id/tilAltura">
+
+        <RadioButton
+            android:id="@+id/generoHombre"
+            style="@style/seleccionBotones"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/hombre"
+            />
+
+        <RadioButton
+            android:id="@+id/generoMujer"
+            style="@style/seleccionBotones"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/mujer" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/terminaRegistro"
+        style="@style/botonVerde"
+        android:layout_marginTop="55dp"
+        android:text="@string/aceptar"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@+id/radioActividad" />
+
+    <RadioGroup
+        android:id="@+id/radioActividad"
+        style="@style/fondoBotones"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@id/radioGenero"
+        tools:layout_editor_absoluteY="291dp"
+        android:layout_marginTop="34dp">
+
+
+            <RadioButton
+                android:id="@+id/activo"
+                style="@style/seleccionBotones"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/soy_activo" />
+
+            <RadioButton
+                android:id="@+id/principiante"
+                style="@style/seleccionBotones"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:text="@string/soy_principiante" />
+
+    </RadioGroup>
+    <TableRow
+        android:id="@+id/TableRow3"
+        style="@style/fondoBotones"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@id/radioActividad">
+
+        <TextView
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center|start"
+            android:text="@string/entreno_habitualmente"
+            android:textColor="@color/blancoApp"
+            android:textSize="11sp"/>
+
+        <TextView
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center|start"
+            android:text="@string/string_soy_sedentario"
+            android:textColor="@color/blancoApp"
+            android:textSize="11sp"/>
+    </TableRow>
+
+    <Button
+        android:id="@+id/volverAtras"
+        android:layout_marginTop="20dp"
+        android:text="@string/volver_atras"
+        android:onClick="volverAtras"
+        style="@style/botonNegro"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@+id/terminaRegistro"
+        tools:layout_editor_absoluteY="721dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

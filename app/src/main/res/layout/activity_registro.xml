@@ -22,7 +22,7 @@
         android:layout_marginTop="20dp"
         android:fontFamily="@font/bebasneueregular"
         android:gravity="center"
-        android:text="STRONG"
+        android:text="@string/strong"
         android:textColor="@color/verdeApp"
         android:textSize="55sp"
         app:layout_constraintEnd_toStartOf="@+id/GuidelineDerecha"
@@ -38,8 +38,8 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
         android:fontFamily="@font/aeonikbold"
-        android:gravity="left"
-        android:text="Registro"
+        android:gravity="start"
+        android:text="@string/registro"
         android:textColor="@color/blancoApp"
         android:textSize="45sp"
         app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda"
@@ -56,10 +56,10 @@
 
         <!-- EditText nombre de usuario -->
         <EditText
-            style="@style/editText"
             android:id="@+id/etNombreUsuario"
+            style="@style/editText"
             android:background="@color/transparente"
-            android:hint="Nombre de usuario"
+            android:hint="@string/nombre_de_usuario"
             tools:ignore="SpeakableTextPresentCheck"
             android:inputType="text"></EditText>
     </com.google.android.material.textfield.TextInputLayout>
@@ -74,11 +74,12 @@
 
         <!-- EditText email -->
         <EditText
-            style="@style/editText"
             android:id="@+id/etEmail"
+            style="@style/editText"
             android:background="@color/transparente"
-            android:hint="Email"
-            android:inputType="textEmailAddress"></EditText>
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck"></EditText>
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- TextInputLayout contraseña -->
@@ -92,11 +93,12 @@
 
         <!-- EditText contraseña -->
         <EditText
-            style="@style/editText"
             android:id="@+id/etContraseña"
+            style="@style/editText"
             android:background="@color/transparente"
-            android:hint="Contraseña"
-            android:inputType="textPassword"></EditText>
+            android:hint="@string/contrasenia"
+            android:inputType="textPassword"
+            tools:ignore="SpeakableTextPresentCheck"></EditText>
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- TextInputLayout repite contraseña -->
@@ -110,11 +112,12 @@
 
         <!-- EditText repite contraseña -->
         <EditText
-            style="@style/editText"
             android:id="@+id/etRepiteContraseña"
+            style="@style/editText"
             android:background="@color/transparente"
-            android:hint="Repite contraseña"
-            android:inputType="textPassword"></EditText>
+            android:hint="@string/repite_contrasenia"
+            android:inputType="textPassword"
+            tools:ignore="SpeakableTextPresentCheck"></EditText>
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -123,20 +126,21 @@
     <!-- Button Acceder -->
     <Button
         android:id="@+id/bt1_registro_registrarse"
-        android:onClick="bt1_registro_registrarse"
         style="@style/botonVerde"
-        android:text="REGISTRARSE"
         android:layout_marginBottom="10dp"
+        android:onClick="bt1_registro_registrarse"
+        android:text="@string/registrarse"
         app:layout_constraintBottom_toTopOf="@+id/bt2_registro_volver_al_login"
         app:layout_constraintEnd_toStartOf="@+id/GuidelineDerecha"
-        app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda" />
+        app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda"
+        tools:ignore="TextContrastCheck" />
 
     <!-- Button Registrarse -->
     <Button
         android:id="@+id/bt2_registro_volver_al_login"
         android:onClick="bt2_registro_volver_al_login"
         style="@style/botonNegro"
-        android:text="VOLVER AL LOGIN"
+        android:text="@string/volver_al_login"
         app:layout_constraintEnd_toStartOf="@+id/GuidelineDerecha"
         app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda"
         app:layout_constraintBottom_toTopOf="@+id/GuidelineInferior"

@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- BOTONES -->
-    <!-- Button verde -->
-    <style name="botonVerde" >
+    <style name="tvderecomendado">
+        <item name="android:textSize">25sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/blancoApp</item>
+    </style>
+    <style name="tvmostrarrecomendacion">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/verdeApp</item>
+        <item name="android:layout_marginBottom">60dp </item>
+    </style>
+
+    <style name="estiloTitulo">
+        <item name="fontFamily">@font/bebasneueregular</item>
+        <item name="android:textColor">@color/verdeApp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">60dp</item>
+        <item name="android:text">@string/app_name</item>
+    </style>
+
+    <style name="botonVerde">
         <item name="android:backgroundTint">@color/verdeApp</item>
         <item name="cornerRadius">15dp</item>
         <item name="android:state_pressed">true</item>
@@ -13,7 +30,6 @@
         <item name="strokeColor">@color/blancoApp</item>
     </style>
 
-    <!-- Button transparente -->
     <style name="botonNegro" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="alpha">1</item>
         <item name="android:state_pressed">true</item>
@@ -29,6 +45,7 @@
     <!-- TextInputLayout -->
     <style name="textInputLayout">
         <item name="android:textColorHint">@color/blancoApp</item>
+        <item name="android:textColor">@color/blancoApp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_marginTop">10dp</item>
@@ -42,7 +59,27 @@
         <item name="android:textColorHint">@color/blancoApp</item>
         <item name="maxLines">1</item>
         <item name="android:textColor">@color/verdeApp</item>
+        <item  name="android:background">@color/transparente</item>
         <item name="android:textSize">17dp</item>
+    </style>
+
+    <!-- PARTE DE LA SELECCION DE BOTONES-->
+    <!-- Seleccion de botones-->
+    <style name="seleccionBotones">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:drawableRight">@android:drawable/btn_radio</item>
+        <item name="android:button">@null</item>
+        <item name="android:textColor">@color/verdeApp</item>
+        <item name="fontFamily">@font/aeonikbold</item>
+        <item name="android:paddingLeft">10dp</item>
+    </style>
+
+    <!-- Fondo y estilo del contorno de los botones.-->
+    <style name="fondoBotones">
+        <item name="android:background">@color/negroApp</item>
+        <item name="cornerRadius">20dp</item>
+        <item name="android:textSize">17dp</item>
+        <item name="android:textColor">@color/verdeApp</item>
     </style>
 
 </resources>
