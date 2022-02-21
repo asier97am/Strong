@@ -56,8 +56,8 @@
 
         <!-- EditText nombre de usuario -->
         <EditText
-            style="@style/editText"
             android:id="@+id/etNombreUsuario"
+            style="@style/editText"
             android:background="@color/transparente"
             android:hint="@string/nombre_de_usuario"
             tools:ignore="SpeakableTextPresentCheck"

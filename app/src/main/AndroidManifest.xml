@@ -17,7 +17,7 @@
 
         <!-- Activity animacion splash screen -->
         <activity
-            android:name=".Animation"
+            android:name=".DespuesDeRegistro"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,25 +33,21 @@
         <!-- Activity registro -->
         <activity
             android:name=".Registro"
-            android:parentActivityName=".Bienvenida"
             android:exported="true"></activity>
 
         <!-- Activity DespuesRegistro -->
         <activity
-            android:name=".DespuesDeRegistro"
-            android:parentActivityName=".Registro"
+            android:name=".Animation"
             android:exported="true"></activity>
 
         <!-- Activity Login -->
         <activity
             android:name=".SistemaLogin"
-            android:parentActivityName=".Bienvenida"
             android:exported="true"></activity>
 
         <!-- Activity RecuperacionPassword -->
         <activity
             android:name=".SistemaRecuperacionContraseña"
-            android:parentActivityName=".SistemaLogin"
             android:exported="true"></activity>
 
 
