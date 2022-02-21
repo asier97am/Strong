@@ -1,6 +1,5 @@
 package com.asier.aranda.strong;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,12 +11,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.asier.aranda.strong.fragment.Page1;
 
+import com.asier.aranda.strong.BDPersona.DataPersona;
+
 
 public class DespuesDeRegistro extends AppCompatActivity {
     EditText edad, peso, altura;
     RadioGroup actividad, genero;
     Button accionTerminaRegistro;
-    GestionPersona persona;
+
     RadioButton generoHombre, generoMujer, actividadPrincipiante, actividadActivo;
     String datoActividad, datoGenero;
 
@@ -25,6 +26,9 @@ public class DespuesDeRegistro extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_despues_registro);
+
+         DataPersona bbdd = new DataPersona(DespuesDeRegistro.this);
+
 
         // VARIABLES
         edad = findViewById(R.id.edadDespRegistro);
@@ -50,21 +54,22 @@ public class DespuesDeRegistro extends AppCompatActivity {
             }
         });
 
+
+
         accionTerminaRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Float datoPeso = Float.parseFloat(peso.getText().toString());
-//                int datoEdad = Integer.parseInt(edad.getText().toString());
-//                Float datoAltura = Float.parseFloat(altura.getText().toString());
-//                //persona = new GestionPersona(datoPeso, datoEdad, datoAltura);
+                Float datoPeso = Float.parseFloat(peso.getText().toString());
+                int datoEdad = Integer.parseInt(edad.getText().toString());
+                Float datoAltura = Float.parseFloat(altura.getText().toString());
 
                 Intent intent=new Intent(DespuesDeRegistro.this, MainBN.class);
                 startActivity(intent);
 
+                //persona = new GestionPersona(datoPeso, datoEdad, datoAltura);
+
             }
         });
-
-    }
 
     public void volverAtras(View view){
         Intent intent=new Intent(DespuesDeRegistro.this, Registro.class);
