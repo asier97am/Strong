@@ -42,7 +42,6 @@ public class DespuesDeRegistro extends AppCompatActivity{
 
         accionTerminaRegistro = findViewById(R.id.terminaRegistro);
 
-
         p = (Persona) this.getIntent().getParcelableExtra("persona");
 
         actividad.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {

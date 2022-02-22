@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import com.asier.aranda.strong.Persona;
 import com.asier.aranda.strong.R;
 import com.asier.aranda.strong.fragment.Page1;
 import com.asier.aranda.strong.fragment.Page2;
@@ -18,14 +19,15 @@ import com.asier.aranda.strong.fragment.Page3;
  * one of the sections/tabs/pages.
  */
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
-
+    Persona persona = new Persona();
     //@StringRes
     //private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2,R.string.tab_text_3,R.string.tab_text_4};
     private final Context mContext;
 
-    public SectionsPagerAdapter(Context context, FragmentManager fm) {
+    public SectionsPagerAdapter(Context context, FragmentManager fm, Persona persona) {
         super(fm);
         mContext = context;
+        this.persona = persona;
     }
 
     @Override
@@ -38,9 +40,9 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
             case 0:
                 return new Page1();
             case 1:
-                return new Page2();
+                return new Page2(persona);
             case 2:
-                return new Page3();
+                return new Page3(persona);
             default:
                 return null;
         }

@@ -40,15 +40,14 @@ public class SistemaLogin extends AppCompatActivity {
                 Persona p = new Persona();
                 String user = usuario.getText().toString();
                 String pass = password.getText().toString();
-                p = bbdd.busquedaDatosPersona(user, pass);
 
-                if(bbdd != null){
+
+                if(bbdd.busquedaDatosPersona(user, pass) != null){
                     intent = new Intent(SistemaLogin.this, MainBN.class);
-
-
+                    p = bbdd.busquedaDatosPersona(user, pass);
                     intent.putExtra("persona", p);
-                    startActivity(intent);
 
+                    startActivity(intent);
                 }else {
                     Toast.makeText(getApplicationContext(), "Usuario o contraseña no coinciden", Toast.LENGTH_LONG).show();
                 }

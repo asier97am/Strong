@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
+import com.asier.aranda.strong.MainBN;
+import com.asier.aranda.strong.Persona;
 import com.asier.aranda.strong.R;
 
 import org.w3c.dom.Text;
@@ -28,8 +30,18 @@ public class Page2 extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public Page2() {
+    //Nuevo por parte de la pagina.
+    private TextView nombreTitulo;
+
+    Persona persona = new Persona();
+
+    public Page2(Persona persona) {
         // Required empty public constructor
+        this.persona = persona;
+    }
+
+    public Page2() {
+
     }
 
     /**
@@ -73,10 +85,15 @@ public class Page2 extends Fragment {
         //ImageView mback= new ImageView(.findViewById(R.id.backView));
 
         // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment2_estadisticas, container, false);
+
+        nombreTitulo = view.findViewById(R.id.tvNombreUsuario);
 
 
+        nombreTitulo.setText(persona.getUsername());
 
-        return inflater.inflate(R.layout.fragment2_estadisticas, container, false);
+
+        return view;
     }
 
 
