@@ -44,8 +44,8 @@ public class DataPersona extends SQLiteOpenHelper {
         SQLiteDatabase db = getWritableDatabase();
 
         if(db != null){
-            db.execSQL("INSERT INTO t_persona (correo, nombre, password ) VALUES ('"+ p.getEmail() +
-                    "', '" + p.getUsername() + "', '" + p.getPassword() + "')");
+            db.execSQL("INSERT INTO t_persona (correo, nombre, password, altura, peso, genero, actividad ) VALUES ('"+ p.getEmail() +
+                    "', '" + p.getUsername() + "', '" + p.getPassword() + "', " + p.getAltura() + "," + p.getPeso() + " , '" + p.getGenero() + "', '" + p.getActividad() +"')");
             db.close();
         }
     }
@@ -63,44 +63,48 @@ public class DataPersona extends SQLiteOpenHelper {
     }
 
     @SuppressLint("Range")
-    public Persona busquedaDatosPersona(String id){
+    public Persona busquedaDatosPersona(String user, String password){
 
         Persona p = new Persona();
         SQLiteDatabase db = getWritableDatabase();
 
         String dato = "";
-        Cursor cursor = db.rawQuery("select * from t_almacen where id = " + id, null);
+        Cursor cursor = db.rawQuery("select * from t_almacen where user = '" + user + "' and password = '" + password + "'", null);
+        if(cursor != null){
+            cursor.moveToFirst();
 
-        cursor.moveToFirst();
+            dato = cursor.getString(cursor.getColumnIndex("id"));
+            p.setIdentificador(dato);
 
-        dato = cursor.getString(cursor.getColumnIndex("id"));
-        p.setIdentificador(dato);
+            dato = cursor.getString(cursor.getColumnIndex("correo"));
+            p.setEmail(dato);
 
-        dato = cursor.getString(cursor.getColumnIndex("correo"));
-        p.setEmail(dato);
+            dato = cursor.getString(cursor.getColumnIndex("apellido"));
+            p.setApellido(dato);
 
-        dato = cursor.getString(cursor.getColumnIndex("apellido"));
-        p.setApellido(dato);
+            dato = cursor.getString(cursor.getColumnIndex("nombre"));
+            p.setUsername(dato);
 
-        dato = cursor.getString(cursor.getColumnIndex("nombre"));
-        p.setUsername(dato);
+            dato = cursor.getString(cursor.getColumnIndex("password"));
+            p.setPassword(dato);
 
-        dato = cursor.getString(cursor.getColumnIndex("password"));
-        p.setPassword(dato);
+            dato = cursor.getString(cursor.getColumnIndex("altura"));
+            p.setAltura(Float.parseFloat(dato));
 
-        dato = cursor.getString(cursor.getColumnIndex("altura"));
-        p.setAltura(Float.parseFloat(dato));
+            dato = cursor.getString(cursor.getColumnIndex("peso"));
+            p.setPeso(Float.parseFloat(dato));
 
-        dato = cursor.getString(cursor.getColumnIndex("peso"));
-        p.setPeso(Float.parseFloat(dato));
+            dato = cursor.getString(cursor.getColumnIndex("genero"));
+            p.setGenero(dato);
 
-        dato = cursor.getString(cursor.getColumnIndex("genero"));
-        p.setGenero(dato);
+            dato = cursor.getString(cursor.getColumnIndex("actividad"));
+            p.setActividad(dato);
 
-        dato = cursor.getString(cursor.getColumnIndex("actividad"));
-        p.setActividad(dato);
+            cursor.close();
+        }else{
+            return null;
+        }
 
-        cursor.close();
 
         return p;
 

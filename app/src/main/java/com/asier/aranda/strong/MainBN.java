@@ -2,6 +2,7 @@ package com.asier.aranda.strong;
 
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -34,13 +35,14 @@ import com.asier.aranda.strong.databinding.ActivityMainBnBinding;
 public class MainBN extends AppCompatActivity {
 
     private ActivityMainBnBinding binding;
-
+    Persona persona = new Persona();
     private MenuItem prevMenuItem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //getSupportActionBar().hide();
+        persona = this.getIntent().getParcelableExtra("persona");
 
         binding = ActivityMainBnBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());

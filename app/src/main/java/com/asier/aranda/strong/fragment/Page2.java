@@ -4,10 +4,13 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
 import com.asier.aranda.strong.R;
+
+import org.w3c.dom.Text;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -57,6 +60,7 @@ public class Page2 extends Fragment {
 //                .centerCrop()
 //                .into(mback);
 
+
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -69,6 +73,9 @@ public class Page2 extends Fragment {
         //ImageView mback= new ImageView(.findViewById(R.id.backView));
 
         // Inflate the layout for this fragment
+
+
+
         return inflater.inflate(R.layout.fragment2_estadisticas, container, false);
     }
 

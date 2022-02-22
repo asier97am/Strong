@@ -2,6 +2,7 @@ package com.asier.aranda.strong;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,8 +15,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.asier.aranda.strong.bbddUser.DataPersona;
 import com.asier.aranda.strong.fragment.Page1;
 
+import java.io.Serializable;
 
-public class DespuesDeRegistro extends AppCompatActivity {
+
+public class DespuesDeRegistro extends AppCompatActivity{
     EditText edad, peso, altura;
     RadioGroup actividad, genero;
     Button accionTerminaRegistro;
@@ -23,7 +26,6 @@ public class DespuesDeRegistro extends AppCompatActivity {
     DataPersona bbdd = new DataPersona(DespuesDeRegistro.this);
     Persona p = new Persona();
 
-    RadioButton generoHombre, generoMujer, actividadPrincipiante, actividadActivo;
     String datoActividad, datoGenero;
 
     @Override
@@ -39,6 +41,9 @@ public class DespuesDeRegistro extends AppCompatActivity {
         genero = findViewById(R.id.radioGenero);
 
         accionTerminaRegistro = findViewById(R.id.terminaRegistro);
+
+
+        p = (Persona) this.getIntent().getParcelableExtra("persona");
 
         actividad.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -72,15 +77,18 @@ public class DespuesDeRegistro extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent=new Intent(DespuesDeRegistro.this, MainBN.class);
+                Intent intent = new Intent(DespuesDeRegistro.this, MainBN.class);
 
                 Integer ed = Integer.parseInt(edad.getText().toString());
                 p.setEdad(ed);
-                Float pe = Float.parseFloat(peso.getText().toString());
+                Float pe = Float.parseFloat(altura.getText().toString());
+                p.setAltura(pe);
+                pe = Float.parseFloat(peso.getText().toString());
                 p.setPeso(pe);
                 p.setGenero(datoGenero);
                 p.setActividad(datoActividad);
 
+                bbdd.agregarUsuario(p);
                 Toast.makeText(getApplicationContext(), p.toString(), Toast.LENGTH_LONG).show();
                 startActivity(intent);
 
