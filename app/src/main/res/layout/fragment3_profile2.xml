@@ -196,7 +196,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tilMail">
 
                 <RadioButton
-                    android:id="@+id/radioButton7"
+                    android:id="@+id/hombrePerfil"
                     style="@style/seleccionBotones"
                     android:layout_width="90dp"
                     android:layout_height="wrap_content"
@@ -204,7 +204,7 @@
                     android:text="@string/hombre" />
 
                 <RadioButton
-                    android:id="@+id/radioButton8"
+                    android:id="@+id/mujerPerfil"
                     style="@style/seleccionBotones"
                     android:layout_width="wrap_content"
                     android:layout_weight="1"
@@ -223,7 +223,7 @@
                 app:layout_constraintTop_toBottomOf="@id/generoPerfil">
 
                 <RadioButton
-                    android:id="@+id/radioButton1"
+                    android:id="@+id/activoPerfil"
                     style="@style/seleccionBotones"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -231,7 +231,7 @@
                     android:text="@string/soy_activo" />
 
                 <RadioButton
-                    android:id="@+id/radioButton2"
+                    android:id="@+id/principiantePerfil"
                     style="@style/seleccionBotones"
                     android:layout_width="match_parent"
                     android:layout_weight="1"

@@ -29,6 +29,7 @@ public class DataPersona extends SQLiteOpenHelper {
                 "apellido TEXT,"+
                 "nombre TEXT NOT NULL," +
                 "password TEXT NOT NULL," +
+                "edad INTEGER NOT NULL," +
                 "altura TEXT,"+
                 "peso TEXT," +
                 "genero TEXT, " +
@@ -44,8 +45,8 @@ public class DataPersona extends SQLiteOpenHelper {
         SQLiteDatabase db = getWritableDatabase();
 
         if(db != null){
-            db.execSQL("INSERT INTO t_persona (correo, nombre, password, altura, peso, genero, actividad ) VALUES ('"+ p.getEmail() +
-                    "', '" + p.getUsername() + "', '" + p.getPassword() + "', " + p.getAltura() + "," + p.getPeso() + " , '" + p.getGenero() + "', '" + p.getActividad() +"')");
+            db.execSQL("INSERT INTO t_persona (correo, nombre, password, edad, altura, peso, genero, actividad) VALUES ('"+ p.getEmail() +
+                    "', '" + p.getUsername() + "', '" + p.getPassword() + "'," + p.getEdad() + " ," + p.getAltura() + "," + p.getPeso() + " , '" + p.getGenero() + "', '" + p.getActividad() +"')");
             db.close();
         }
     }
@@ -69,11 +70,11 @@ public class DataPersona extends SQLiteOpenHelper {
         SQLiteDatabase db = getWritableDatabase();
 
         String dato = "";
-        Cursor cursor = db.rawQuery("select id, correo, nombre, altura, peso, genero, actividad from t_persona where nombre like '" + user + "' and password like '" + pass + "'", null);
+        Cursor cursor = db.rawQuery("select id, correo, nombre, altura, peso, genero, actividad, edad from t_persona where nombre like '" + user + "' and password like '" + pass + "'", null);
+
 
         if(cursor != null){
             cursor.moveToFirst();
-
             dato = cursor.getString(cursor.getColumnIndex("id"));
             p.setIdentificador(dato);
 
@@ -101,7 +102,11 @@ public class DataPersona extends SQLiteOpenHelper {
             dato = cursor.getString(cursor.getColumnIndex("actividad"));
             p.setActividad(dato);
 
+            dato = cursor.getString(cursor.getColumnIndex("edad"));
+            p.setEdad(Integer.parseInt(dato));
+
             cursor.close();
+
         }else{
             return null;
         }
@@ -110,6 +115,20 @@ public class DataPersona extends SQLiteOpenHelper {
         return p;
 
     }
+    @SuppressLint("Range")
+    public boolean busquedaDatosExistencia(String user, String pass){
+        SQLiteDatabase db = getWritableDatabase();
+        Cursor cursor = db.rawQuery("select nombre, password from t_persona where nombre like '" + user + "' and password like '" + pass + "'", null);
+        String dato = cursor.getString(cursor.getColumnIndex("nombre"));
 
+        cursor.close();
+
+        if(dato.equals("") || dato == null){
+            return false;
+        }else {
+            return true;
+        }
+
+    }
 
 }
