@@ -9,6 +9,7 @@ import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 
 import com.asier.aranda.strong.bbddUser.DataPersona;
@@ -17,7 +18,7 @@ import java.io.Serializable;
 
 public class Registro extends AppCompatActivity{
     EditText user, password, email, repPassword;
-
+    DataPersona bbdd = new DataPersona(Registro.this);
     Button accionRegistrarse;
 
     @Override
@@ -31,19 +32,30 @@ public class Registro extends AppCompatActivity{
         repPassword = findViewById(R.id.etRepiteContraseña);
         accionRegistrarse = findViewById(R.id.bt1_registro_registrarse);
 
+
+
         accionRegistrarse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), DespuesDeRegistro.class);
                 Persona p = new Persona();
 
-                p.setUsername(user.getText().toString());
-                p.setEmail(email.getText().toString());
-                p.setPassword(password.getText().toString());
+                String u = user.getText().toString();
+                String c = email.getText().toString();
+                String pas = password.getText().toString();
+                boolean entrada = bbdd.busquedaDatosExistencia(u, pas);
 
-                intent.putExtra("persona", p);
+                if(entrada){
+                    Toast.makeText(getApplicationContext(), "Este usuario ya existe", Toast.LENGTH_SHORT).show();
+                }else{
+                    p.setUsername(u);
+                    p.setEmail(c);
+                    p.setPassword(pas);
+                    intent.putExtra("persona", p);
 
-                startActivity(intent);
+                    startActivity(intent);
+
+                }
             }
         });
 

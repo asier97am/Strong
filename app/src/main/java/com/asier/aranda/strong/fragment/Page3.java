@@ -11,7 +11,9 @@ import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
@@ -27,7 +29,8 @@ public class Page3 extends Fragment {
 
     Persona persona;
     EditText nombrePersona, edadPersona, pesoPersona, alturaPersona, emailPersona;
-    RadioGroup actividad, genero;
+    RadioGroup actividadPersona, generoPersona;
+    RadioButton hombreP, mujerP, activoPerfil, principiantePerfil;
 
     public Page3(Persona persona){
         this.persona = persona;
@@ -60,14 +63,30 @@ public class Page3 extends Fragment {
         alturaPersona = view.findViewById(R.id.etAltura);
         emailPersona = view.findViewById(R.id.etMail);
         pesoPersona = view.findViewById(R.id.etPeso);
-        actividad = view.findViewById(R.id.actividadPerfil);
-        genero = view.findViewById(R.id.generoPerfil);
+        actividadPersona = view.findViewById(R.id.actividadPerfil);
+        generoPersona = view.findViewById(R.id.generoPerfil);
+        hombreP = view.findViewById(R.id.hombrePerfil);
+        mujerP = view.findViewById(R.id.mujerPerfil);
+        activoPerfil = view.findViewById(R.id.activoPerfil);
+        principiantePerfil = view.findViewById(R.id.principiantePerfil);
 
         nombrePersona.setText(persona.getUsername());
         edadPersona.setText(persona.getEdad() + "");
-//        alturaPersona.setText(persona.getAltura().toString());
-//        emailPersona.setText(persona.getEmail());
-//        pesoPersona.setText(persona.getPeso().toString());
+        alturaPersona.setText(persona.getAltura().toString());
+        emailPersona.setText(persona.getEmail());
+        pesoPersona.setText(persona.getPeso().toString());
+
+        if(persona.getGenero().equals("Hombre")){
+            hombreP.setChecked(true);
+        }else{
+            mujerP.setChecked(true);
+        }
+
+        if(persona.getActividad().equals("Principiante")){
+            principiantePerfil.setChecked(true);
+        }else{
+            activoPerfil.setChecked(true);
+        }
 
 
         return view;

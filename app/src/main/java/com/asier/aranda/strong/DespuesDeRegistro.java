@@ -1,6 +1,7 @@
 package com.asier.aranda.strong;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.view.View;
@@ -78,8 +79,8 @@ public class DespuesDeRegistro extends AppCompatActivity{
 
                 Intent intent = new Intent(DespuesDeRegistro.this, MainBN.class);
 
-                Integer ed = Integer.parseInt(edad.getText().toString());
-                p.setEdad(ed);
+                int e = Integer.parseInt(edad.getText().toString());
+                p.setEdad(e);
                 Float pe = Float.parseFloat(altura.getText().toString());
                 p.setAltura(pe);
                 pe = Float.parseFloat(peso.getText().toString());
