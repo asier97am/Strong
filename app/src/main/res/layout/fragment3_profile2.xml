@@ -184,7 +184,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <RadioGroup
-                android:id="@+id/radioGroup2"
+                android:id="@+id/generoPerfil"
                 style="@style/fondoBotones"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -212,7 +212,7 @@
             </RadioGroup>
 
             <RadioGroup
-                android:id="@+id/radioGroup"
+                android:id="@+id/actividadPerfil"
                 style="@style/fondoBotones"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -220,7 +220,7 @@
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toStartOf="@+id/guideline3"
                 app:layout_constraintStart_toStartOf="@+id/guideline2"
-                app:layout_constraintTop_toBottomOf="@id/radioGroup2">
+                app:layout_constraintTop_toBottomOf="@id/generoPerfil">
 
                 <RadioButton
                     android:id="@+id/radioButton1"
@@ -247,7 +247,7 @@
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toStartOf="@+id/guideline3"
                 app:layout_constraintStart_toStartOf="@+id/guideline2"
-                app:layout_constraintTop_toBottomOf="@id/radioGroup">
+                app:layout_constraintTop_toBottomOf="@id/actividadPerfil">
 
                 <TextView
                     android:layout_width="175dp"

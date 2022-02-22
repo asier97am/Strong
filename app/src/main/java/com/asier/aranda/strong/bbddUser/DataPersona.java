@@ -63,13 +63,14 @@ public class DataPersona extends SQLiteOpenHelper {
     }
 
     @SuppressLint("Range")
-    public Persona busquedaDatosPersona(String user, String password){
+    public Persona busquedaDatosPersona(String user, String pass){
 
         Persona p = new Persona();
         SQLiteDatabase db = getWritableDatabase();
 
         String dato = "";
-        Cursor cursor = db.rawQuery("select * from t_almacen where user = '" + user + "' and password = '" + password + "'", null);
+        Cursor cursor = db.rawQuery("select id, correo, nombre, altura, peso, genero, actividad from t_persona where nombre like '" + user + "' and password like '" + pass + "'", null);
+
         if(cursor != null){
             cursor.moveToFirst();
 
@@ -79,14 +80,14 @@ public class DataPersona extends SQLiteOpenHelper {
             dato = cursor.getString(cursor.getColumnIndex("correo"));
             p.setEmail(dato);
 
-            dato = cursor.getString(cursor.getColumnIndex("apellido"));
-            p.setApellido(dato);
+//            dato = cursor.getString(cursor.getColumnIndex("apellido"));
+//            p.setApellido(dato);
 
             dato = cursor.getString(cursor.getColumnIndex("nombre"));
             p.setUsername(dato);
 
-            dato = cursor.getString(cursor.getColumnIndex("password"));
-            p.setPassword(dato);
+//            dato = cursor.getString(cursor.getColumnIndex("password"));
+//            p.setPassword(dato);
 
             dato = cursor.getString(cursor.getColumnIndex("altura"));
             p.setAltura(Float.parseFloat(dato));
