@@ -13,7 +13,9 @@
         <activity
             android:name=".MainBN"
             android:exported="true"
-            android:theme="@style/Theme.SinBarra.NoActionBar"></activity>
+            >
+        </activity>
+<!--        android:theme="@style/Theme.SinBarra.NoActionBar"-->
 
         <!-- Activity animacion splash screen -->
         <activity
@@ -49,7 +51,6 @@
         <activity
             android:name=".SistemaRecuperacionContraseña"
             android:exported="true"></activity>
-
 
 
     </application>

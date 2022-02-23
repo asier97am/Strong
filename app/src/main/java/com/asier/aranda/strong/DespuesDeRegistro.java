@@ -88,12 +88,12 @@ public class DespuesDeRegistro extends AppCompatActivity {
 
                 Intent intent = new Intent(DespuesDeRegistro.this, MainBN.class);
 
-                Integer ed = Integer.parseInt(edad.getText().toString());
-                p.setEdad(ed);
-                Float pe = Float.parseFloat(peso.getText().toString());
-                p.setPeso(pe);
-                p.setGenero(datoGenero);
-                p.setActividad(datoActividad);
+//                Integer ed = Integer.parseInt(edad.getText().toString());
+//                p.setEdad(ed);
+//                Float pe = Float.parseFloat(peso.getText().toString());
+//                p.setPeso(pe);
+//                p.setGenero(datoGenero);
+//                p.setActividad(datoActividad);
 
                 Toast.makeText(getApplicationContext(), p.toString(), Toast.LENGTH_LONG).show();
                 startActivity(intent);
