@@ -32,11 +32,11 @@ public class Registro extends AppCompatActivity {
     public void bt1_registro_registrarse(View view) {
         Intent intent = new Intent(Registro.this, DespuesDeRegistro.class);
 
-        p.setUsername(user.getText().toString());
-        p.setEmail(email.getText().toString());
-        p.setPassword(password.getText().toString());
-
-        bbdd.agregarUsuario(p);
+//        p.setUsername(user.getText().toString());
+//        p.setEmail(email.getText().toString());
+//        p.setPassword(password.getText().toString());
+//
+//        bbdd.agregarUsuario(p);
 
 
 
