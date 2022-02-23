@@ -17,6 +17,7 @@ import com.google.android.material.tabs.TabLayout;
 import androidx.annotation.IdRes;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -33,6 +34,8 @@ import com.asier.aranda.strong.databinding.ActivityMainBnBinding;
 
 public class MainBN extends AppCompatActivity {
 
+
+
     private ActivityMainBnBinding binding;
 
     private MenuItem prevMenuItem;
@@ -41,6 +44,11 @@ public class MainBN extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //getSupportActionBar().hide();
+
+        //RECYCLER
+
+        //
+
 
         binding = ActivityMainBnBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());

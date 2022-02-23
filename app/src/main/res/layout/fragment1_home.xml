@@ -3,10 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.Page1"
-    android:background="@color/teal_700"
-    android:alpha="0.6">
+    tools:context=".fragment.Page1">
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="50dp"
+        android:id="@+id/RecyclerId"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <View
+        android:layout_marginTop="300dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
 
 </FrameLayout>
