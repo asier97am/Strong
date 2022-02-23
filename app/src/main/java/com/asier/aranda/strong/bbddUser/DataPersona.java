@@ -119,14 +119,12 @@ public class DataPersona extends SQLiteOpenHelper {
     public boolean busquedaDatosExistencia(String user, String pass){
         SQLiteDatabase db = getWritableDatabase();
         Cursor cursor = db.rawQuery("select nombre, password from t_persona where nombre like '" + user + "' and password like '" + pass + "'", null);
-        String dato = cursor.getString(cursor.getColumnIndex("nombre"));
 
-        cursor.close();
 
-        if(dato.equals("") || dato == null){
-            return false;
-        }else {
+        if(cursor.moveToFirst()){
             return true;
+        }else {
+            return false;
         }
 
     }
