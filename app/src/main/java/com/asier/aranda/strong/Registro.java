@@ -48,6 +48,7 @@ public class Registro extends AppCompatActivity{
                 if(entrada){
                     Toast.makeText(getApplicationContext(), "Este usuario ya existe", Toast.LENGTH_SHORT).show();
                 }else{
+
                     p.setUsername(u);
                     p.setEmail(c);
                     p.setPassword(pas);
