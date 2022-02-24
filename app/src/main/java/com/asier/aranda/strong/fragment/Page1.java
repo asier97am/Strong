@@ -75,9 +75,9 @@ public class Page1 extends Fragment {
         ejercicioLista.add(new EjerciciosHome("Pecho",
                 "El músculo bíceps braquial se encuentra en el brazo, cubriendo los músculos braquial anterior y 1 2 3 4 5.",
                 R.drawable.pecho));
-        ejercicioLista.add(new EjerciciosHome("Pecho2",
+        ejercicioLista.add(new EjerciciosHome("Hombro",
                 "El músculo bíceps braquial se encuentra en el brazo, cubriendo los músculos braquial anterior y 1 2 3 4 5.",
-                R.drawable.pecho));
+                R.drawable.hombro));
 
 
     }

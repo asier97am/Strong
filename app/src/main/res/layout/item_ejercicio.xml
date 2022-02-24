@@ -17,6 +17,7 @@
             android:id="@+id/fotoEjercicio"
             android:layout_width="150dp"
             android:layout_height="150dp"
+            android:scaleType="centerCrop"
             android:src="@drawable/biceps1">
         </ImageView>
 
