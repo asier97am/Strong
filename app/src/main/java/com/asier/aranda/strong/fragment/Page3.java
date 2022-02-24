@@ -52,17 +52,15 @@ public class Page3 extends Fragment {
     }
 
 
-
     public void showAlertDialogButtonClicked(Page3 Page3){
         MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(getContext(),R.style.Theme_Alert);
         builder.setTitle("Información");//TITULO
         builder.setMessage("Aquí podrás cambiar tus datos por si te equivocaste");//MENSAJITO
         builder.setIcon(R.drawable.information);//ICONO
         builder.setCancelable(false);
-        builder.setNeutralButton("skip", new DialogInterface.OnClickListener() {
+        builder.setNeutralButton("Skip", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-
                 dialog.dismiss();
             }
         });
