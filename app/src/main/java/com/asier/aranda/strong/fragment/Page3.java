@@ -57,10 +57,9 @@ public class Page3 extends Fragment {
         builder.setMessage("Aquí podrás cambiar tus datos por si te equivocaste");//MENSAJITO
         builder.setIcon(R.drawable.information);//ICONO
         builder.setCancelable(false);
-        builder.setNeutralButton("skip", new DialogInterface.OnClickListener() {
+        builder.setNeutralButton("Skip", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-
                 dialog.dismiss();
             }
         });

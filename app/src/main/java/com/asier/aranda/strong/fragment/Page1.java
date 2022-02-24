@@ -27,8 +27,6 @@ public class Page1 extends Fragment {
     //
     ArrayList<EjerciciosHome> ejercicioLista;
 
-
-
     public Page1() {
         // Required empty public constructor
     }
@@ -36,7 +34,6 @@ public class Page1 extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
@@ -58,19 +55,19 @@ public class Page1 extends Fragment {
 
     private void llenarLista() {
         ejercicioLista.add(new EjerciciosHome("Biceps",
-                "El músculo bíceps braquial se encuentra en el brazo, cubriendo los músculos braquial anterior y 1 2 3 4 5.","4x10\n5x15",
+                "El  bíceps es un musculo que se encuentra en la parte frontal del brazo. Su funcion principal está en el codo, donde flexiona el antebrazo y supina el antebrazo","Curl un solo brazo 4x10\nDominadas supinas 5x8\nCurl con zarra Z 4x10\nCurl con polea baja 4x12",
                 R.drawable.biceps1));
         ejercicioLista.add(new EjerciciosHome("Triceps",
-                "El músculo bíceps braquial se encuentra en el brazo, cubriendo los músculos braquial anterior y 1 2 3 4 5.","4x10 \n5x15 \n",
+                "El músculo biceps está situado en la región posterior del brazo, está formado por la porción larga, vasto interno y externo.","4x10 \n5x15 \n",
                 R.drawable.triceps));
         ejercicioLista.add(new EjerciciosHome("Gemelo",
-                "El músculo bíceps braquial se encuentra en el brazo, cubriendo los músculos braquial anterior y 1 2 3 4 5.","4x10 \n5x15 \n",
+                "El gemelo es un músculo situado en la región posterior de la pierna, y es el músculo más superficial de la pantorrilla.","4x10 \n5x15 \n",
                 R.drawable.gemelo));
         ejercicioLista.add(new EjerciciosHome("Cuadriceps",
-                "El músculo bíceps braquial se encuentra en el brazo, cubriendo los músculos braquial anterior y 1 2 3 4 5.","4x10 \n5x15 \n",
+                "El es músculo que soporta todo el peso del cuerpo humano y nos permite andar, sentarnos y correr. Se denomina cuádriceps debido a que tiene 4 cabezas musculares","4x10 \n5x15 \n",
                 R.drawable.cuadriceps));
         ejercicioLista.add(new EjerciciosHome("Espalda",
-                "El músculo bíceps braquial se encuentra en el brazo, cubriendo los músculos braquial anterior y 1 2 3 4 5.","4x10 \n5x15 \n",
+                "Parte posterior del cuerpo humano, que va desde el cuello y hombro hasta la cintura. Su anchura va en función de la caja torácica y los hombros","4x10 \n5x15 \n",
                 R.drawable.espalda));
         ejercicioLista.add(new EjerciciosHome("Pecho",
                 "El músculo bíceps braquial se encuentra en el brazo, cubriendo los músculos braquial anterior y 1 2 3 4 5.","4x10 \n5x15 \n",
