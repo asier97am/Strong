@@ -49,7 +49,7 @@ public class Page1 extends Fragment {
         recyclerViewEjercicio.setLayoutManager(new LinearLayoutManager(getContext()));
         llenarLista();
 
-        RecyclerViewAdaptador adaptador= new RecyclerViewAdaptador(ejercicioLista);
+        RecyclerViewAdaptador adaptador= new RecyclerViewAdaptador(ejercicioLista,getContext());
         recyclerViewEjercicio.setAdapter(adaptador);
 
         return vista;
@@ -78,8 +78,6 @@ public class Page1 extends Fragment {
         ejercicioLista.add(new EjerciciosHome("Hombro",
                 "El músculo bíceps braquial se encuentra en el brazo, cubriendo los músculos braquial anterior y 1 2 3 4 5.",
                 R.drawable.hombro));
-
-
     }
 
 }

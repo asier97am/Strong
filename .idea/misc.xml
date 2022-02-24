@@ -22,6 +22,7 @@
         <entry key="..\:/DAM 2 G.Superior Desarrollo aplicaciones multiplataforma/z.APLICACIONES/Strong/app/src/main/res/layout/activity_registro.xml" value="0.33" />
         <entry key="..\:/DAM 2 G.Superior Desarrollo aplicaciones multiplataforma/z.APLICACIONES/Strong/app/src/main/res/layout/details_train.xml" value="0.33" />
         <entry key="..\:/DAM 2 G.Superior Desarrollo aplicaciones multiplataforma/z.APLICACIONES/Strong/app/src/main/res/layout/details_train2.xml" value="0.36666666666666664" />
+        <entry key="..\:/DAM 2 G.Superior Desarrollo aplicaciones multiplataforma/z.APLICACIONES/Strong/app/src/main/res/layout/ejercicio_biceps1.xml" value="0.36666666666666664" />
         <entry key="..\:/DAM 2 G.Superior Desarrollo aplicaciones multiplataforma/z.APLICACIONES/Strong/app/src/main/res/layout/fragment1_home.xml" value="0.28690807799442897" />
         <entry key="..\:/DAM 2 G.Superior Desarrollo aplicaciones multiplataforma/z.APLICACIONES/Strong/app/src/main/res/layout/fragment1_home1.xml" value="0.25769927536231885" />
         <entry key="..\:/DAM 2 G.Superior Desarrollo aplicaciones multiplataforma/z.APLICACIONES/Strong/app/src/main/res/layout/fragment2_estadisticas.xml" value="0.33242753623188404" />
@@ -33,7 +34,7 @@
         <entry key="..\:/DAM 2 G.Superior Desarrollo aplicaciones multiplataforma/z.APLICACIONES/Strong/app/src/main/res/layout/fragment_page2.xml" value="0.5" />
         <entry key="..\:/DAM 2 G.Superior Desarrollo aplicaciones multiplataforma/z.APLICACIONES/Strong/app/src/main/res/layout/fragment_page3.xml" value="0.2758152173913043" />
         <entry key="..\:/DAM 2 G.Superior Desarrollo aplicaciones multiplataforma/z.APLICACIONES/Strong/app/src/main/res/layout/fragment_page4.xml" value="0.2758152173913043" />
-        <entry key="..\:/DAM 2 G.Superior Desarrollo aplicaciones multiplataforma/z.APLICACIONES/Strong/app/src/main/res/layout/item_ejercicio.xml" value="0.33" />
+        <entry key="..\:/DAM 2 G.Superior Desarrollo aplicaciones multiplataforma/z.APLICACIONES/Strong/app/src/main/res/layout/item_ejercicio.xml" value="0.1" />
         <entry key="..\:/DAM 2 G.Superior Desarrollo aplicaciones multiplataforma/z.APLICACIONES/Strong/app/src/main/res/layout/item_ejercicio1.xml" value="0.5" />
         <entry key="..\:/DAM 2 G.Superior Desarrollo aplicaciones multiplataforma/z.APLICACIONES/Strong/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.33" />
         <entry key="..\:/Proyectos_AndroidStudio/Strong/app/src/main/res/drawable/ic_foto1.xml" value="0.2835" />
@@ -45,12 +46,10 @@
         <entry key="..\:/Proyectos_AndroidStudio/Strong/app/src/main/res/layout/activity_main_bn.xml" value="0.17708333333333334" />
         <entry key="..\:/Proyectos_AndroidStudio/Strong/app/src/main/res/layout/activity_recuperar_password.xml" value="0.17708333333333334" />
         <entry key="..\:/Proyectos_AndroidStudio/Strong/app/src/main/res/layout/activity_registro.xml" value="0.1" />
-        <entry key="..\:/Proyectos_AndroidStudio/Strong/app/src/main/res/layout/ejercicio_biceps.xml" value="0.17028985507246377" />
         <entry key="..\:/Proyectos_AndroidStudio/Strong/app/src/main/res/layout/fragment1_home.xml" value="0.17708333333333334" />
         <entry key="..\:/Proyectos_AndroidStudio/Strong/app/src/main/res/layout/fragment2_estadisticas.xml" value="0.264" />
-        <entry key="..\:/Proyectos_AndroidStudio/Strong/app/src/main/res/layout/fragment3_profile2.xml" value="0.2" />
+        <entry key="..\:/Proyectos_AndroidStudio/Strong/app/src/main/res/layout/fragment3_profile2.xml" value="0.4" />
         <entry key="..\:/Proyectos_AndroidStudio/Strong/app/src/main/res/layout/fragment_main_bn.xml" value="0.2791666666666667" />
-        <entry key="..\:/Proyectos_AndroidStudio/Strong/app/src/main/res/layout/item_ejercicio.xml" value="0.17028985507246377" />
         <entry key="..\:/Proyectos_AndroidStudio/Strong/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.2791666666666667" />
       </map>
     </option>
