@@ -62,9 +62,9 @@ public class RecyclerViewAdaptador extends RecyclerView.Adapter<RecyclerViewAdap
 
         position=0;
         EjerciciosHome ejercicioLista1=ejercicioLista.get(position);
-        viewHolder.ejercicio.setText(ejercicioLista1.get(position).getEjercicio());
-        viewHolder.descripcion.setText(ejercicioLista1.get(position).getDescripcion());
-        viewHolder.fotoEjercicio.setImageResource(ejercicioLista1.get(position).getFotoEjercicio());
+        viewHolder.ejercicio.setText(ejercicioLista1.getEjercicio());
+        viewHolder.descripcion.setText(ejercicioLista1.getDescripcion());
+        viewHolder.fotoEjercicio.setImageResource(ejercicioLista1.getFotoEjercicio());
 
 
         viewHolder.card_view.setOnClickListener(new View.OnClickListener() {
@@ -73,11 +73,11 @@ public class RecyclerViewAdaptador extends RecyclerView.Adapter<RecyclerViewAdap
                 AlertDialog.Builder builder=new AlertDialog.Builder(v.getContext());
                 View view=LayoutInflater.from(builder.getContext()).inflate(R.layout.ejercicio_biceps1,null);
                 ImageView dimg=(ImageView)view.findViewById(R.id.dimage);
-                Picasso.with(context).load(ejercicioLista.getFotoEjercicio()).into(dimg);
+                Picasso.with(context).load(ejercicioLista1.getFotoEjercicio()).into(dimg);
                 TextView tvname=(TextView)view.findViewById(R.id.artistname);
-                tvname.setText(ejercicioLista.getEjercicio());
+                tvname.setText(ejercicioLista1.getEjercicio());
                 TextView moviename=(TextView)view.findViewById(R.id.moviename);
-                moviename.setText(ejercicioLista.getDescripcion());
+                moviename.setText(ejercicioLista1.getDescripcion());
                 builder.setView(view);
 
                 builder.setNegativeButton("back", new DialogInterface.OnClickListener() {
