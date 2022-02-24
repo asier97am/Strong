@@ -54,7 +54,7 @@ public class Page3 extends Fragment {
 
 
     public void showAlertDialogButtonClicked(Page3 Page3){
-        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(getContext());
+        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(getContext(),R.style.Theme_Alert);
         builder.setTitle("Información");//TITULO
         builder.setMessage("Aquí podrás cambiar tus datos por si te equivocaste");//MENSAJITO
         builder.setIcon(R.drawable.information);//ICONO
