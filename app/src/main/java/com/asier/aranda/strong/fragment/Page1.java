@@ -58,25 +58,25 @@ public class Page1 extends Fragment {
 
     private void llenarLista() {
         ejercicioLista.add(new EjerciciosHome("Biceps",
-                "El músculo bíceps braquial se encuentra en el brazo, cubriendo los músculos braquial anterior y 1 2 3 4 5.",
+                "El músculo bíceps braquial se encuentra en el brazo, cubriendo los músculos braquial anterior y 1 2 3 4 5.","4x10\n5x15",
                 R.drawable.biceps1));
         ejercicioLista.add(new EjerciciosHome("Triceps",
-                "El músculo bíceps braquial se encuentra en el brazo, cubriendo los músculos braquial anterior y 1 2 3 4 5.",
+                "El músculo bíceps braquial se encuentra en el brazo, cubriendo los músculos braquial anterior y 1 2 3 4 5.","4x10 \n5x15 \n",
                 R.drawable.triceps));
         ejercicioLista.add(new EjerciciosHome("Gemelo",
-                "El músculo bíceps braquial se encuentra en el brazo, cubriendo los músculos braquial anterior y 1 2 3 4 5.",
+                "El músculo bíceps braquial se encuentra en el brazo, cubriendo los músculos braquial anterior y 1 2 3 4 5.","4x10 \n5x15 \n",
                 R.drawable.gemelo));
         ejercicioLista.add(new EjerciciosHome("Cuadriceps",
-                "El músculo bíceps braquial se encuentra en el brazo, cubriendo los músculos braquial anterior y 1 2 3 4 5.",
+                "El músculo bíceps braquial se encuentra en el brazo, cubriendo los músculos braquial anterior y 1 2 3 4 5.","4x10 \n5x15 \n",
                 R.drawable.cuadriceps));
         ejercicioLista.add(new EjerciciosHome("Espalda",
-                "El músculo bíceps braquial se encuentra en el brazo, cubriendo los músculos braquial anterior y 1 2 3 4 5.",
+                "El músculo bíceps braquial se encuentra en el brazo, cubriendo los músculos braquial anterior y 1 2 3 4 5.","4x10 \n5x15 \n",
                 R.drawable.espalda));
         ejercicioLista.add(new EjerciciosHome("Pecho",
-                "El músculo bíceps braquial se encuentra en el brazo, cubriendo los músculos braquial anterior y 1 2 3 4 5.",
+                "El músculo bíceps braquial se encuentra en el brazo, cubriendo los músculos braquial anterior y 1 2 3 4 5.","4x10 \n5x15 \n",
                 R.drawable.pecho));
         ejercicioLista.add(new EjerciciosHome("Hombro",
-                "El músculo bíceps braquial se encuentra en el brazo, cubriendo los músculos braquial anterior y 1 2 3 4 5.",
+                "El músculo bíceps braquial se encuentra en el brazo, cubriendo los músculos braquial anterior y 1 2 3 4 5.","4x10 \n5x15 \n",
                 R.drawable.hombro));
     }
 
