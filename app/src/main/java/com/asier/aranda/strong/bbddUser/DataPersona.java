@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
@@ -51,16 +52,30 @@ public class DataPersona extends SQLiteOpenHelper {
         }
     }
 
-    public Persona acabarPerfil(Persona p){
+    public void cambioDatosPersona(Persona p){
         SQLiteDatabase db = getWritableDatabase();
 
-        db.execSQL("UPDATE t_persona SET edad = " + p.getEdad() +", peso = " + p.getPeso() + ", altura = "
-                + p.getAltura() + ", genero = '" + p.getGenero() + "', actividad = '" + p.getActividad()
-                + "' where id = " + p.getIdentificador());
+        String al = p.getAltura() + "";
+        String pe = p.getPeso() + "";
 
+        db.execSQL("UPDATE t_persona SET edad = " + p.getEdad() +", peso = '" + pe + "', altura = '"
+                + al + "', genero = '" + p.getGenero() + "', actividad = '" + p.getActividad() + "', nombre = '" + p.getUsername() +"', email = '" + p.getEmail() + "'"
+                + " where id = " + p.getIdentificador());
+
+//        db.execSQL("UPDATE t_persona SET nombre = '" + p.getUsername() + "'"
+//                + " where id = " + p.getIdentificador());
+//
         db.close();
 
-        return p;
+//        p.setEdad(p.getEdad());
+//        p.setPeso(p.getPeso());
+//        p.setAltura(p.getAltura());
+//        p.setGenero(p.getGenero());
+//        p.setActividad(p.getActividad());
+//        p.setUsername(p.getUsername());
+//        p.setEmail(p.getEmail());
+
+
     }
 
     @SuppressLint("Range")
@@ -120,7 +135,6 @@ public class DataPersona extends SQLiteOpenHelper {
         SQLiteDatabase db = getWritableDatabase();
         Cursor cursor = db.rawQuery("select nombre, password from t_persona where nombre like '" + user + "' and password like '" + pass + "'", null);
 
-
         if(cursor.moveToFirst()){
             return true;
         }else {
@@ -128,5 +142,8 @@ public class DataPersona extends SQLiteOpenHelper {
         }
 
     }
+
+
+
 
 }
