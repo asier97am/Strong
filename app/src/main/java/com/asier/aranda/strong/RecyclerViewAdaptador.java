@@ -60,11 +60,11 @@ public class RecyclerViewAdaptador extends RecyclerView.Adapter<RecyclerViewAdap
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
 
-        position=0;
+
         EjerciciosHome ejercicioLista1=ejercicioLista.get(position);
-        viewHolder.ejercicio.setText(ejercicioLista1.getEjercicio());
-        viewHolder.descripcion.setText(ejercicioLista1.getDescripcion());
-        viewHolder.fotoEjercicio.setImageResource(ejercicioLista1.getFotoEjercicio());
+        viewHolder.ejercicio.setText(ejercicioLista.get(position).getEjercicio());
+        viewHolder.descripcion.setText(ejercicioLista.get(position).getDescripcion());
+        viewHolder.fotoEjercicio.setImageResource(ejercicioLista.get(position).getFotoEjercicio());
 
 
         viewHolder.card_view.setOnClickListener(new View.OnClickListener() {
