@@ -113,23 +113,6 @@
                     tools:ignore="SpeakableTextPresentCheck"></EditText>
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- TextInputLayout email -->
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilApellidos"
-                style="@style/textInputLayout"
-                app:layout_constraintEnd_toEndOf="@+id/guideline3"
-                app:layout_constraintStart_toStartOf="@+id/guideline2"
-                app:layout_constraintTop_toBottomOf="@+id/tilNombre">
-
-                <!-- EditText email -->
-                <EditText
-                    android:id="@+id/etApellidos"
-                    style="@style/editText"
-                    android:background="@color/transparente"
-                    android:hint="@string/apellidos"
-                    android:inputType="textEmailAddress"
-                    tools:ignore="SpeakableTextPresentCheck"></EditText>
-            </com.google.android.material.textfield.TextInputLayout>
 
             <!-- TextInputLayout contraseña -->
             <com.google.android.material.textfield.TextInputLayout
@@ -137,7 +120,7 @@
                 style="@style/textInputLayout"
                 app:layout_constraintEnd_toEndOf="@+id/guideline3"
                 app:layout_constraintStart_toStartOf="@+id/guideline2"
-                app:layout_constraintTop_toBottomOf="@+id/tilApellidos">
+                app:layout_constraintTop_toBottomOf="@+id/tilNombre">
 
                 <!-- EditText contraseña -->
                 <EditText
