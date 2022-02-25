@@ -96,6 +96,9 @@ public class DespuesDeRegistro extends AppCompatActivity {
 //                p.setActividad(datoActividad);
 
                 Toast.makeText(getApplicationContext(), p.toString(), Toast.LENGTH_LONG).show();
+
+                intent.putExtra("persona", p);
+
                 startActivity(intent);
             }
         });

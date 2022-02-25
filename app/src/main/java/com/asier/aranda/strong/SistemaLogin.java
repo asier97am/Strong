@@ -1,6 +1,7 @@
 package com.asier.aranda.strong;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -41,7 +42,6 @@ public class SistemaLogin extends AppCompatActivity {
                 String user = usuario.getText().toString();
                 String pass = password.getText().toString();
 
-
                 if(bbdd.busquedaDatosPersona(user, pass) != null){
                     intent = new Intent(SistemaLogin.this, MainBN.class);
                     p = bbdd.busquedaDatosPersona(user, pass);
@@ -58,7 +58,7 @@ public class SistemaLogin extends AppCompatActivity {
         accionRegistrarse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(SistemaLogin.this, Registro.class);
+                Intent intent = new Intent(SistemaLogin.this, Registro.class);
                 startActivity(intent);
             }
         });

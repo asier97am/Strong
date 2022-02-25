@@ -46,6 +46,8 @@ public class MainBN extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //getSupportActionBar().hide();
         persona = this.getIntent().getParcelableExtra("persona");
+        //Bundle extras = getIntent().getExtras();
+        //boolean invitado = extras.getBoolean("invitado");
 
         //RECYCLER
 
@@ -73,6 +75,7 @@ public class MainBN extends AppCompatActivity {
                         //removeBadge(mybottomNavView,item.getItemId());
                         viewPager.setCurrentItem(0);
                         break;
+
                     case R.id.estadisticas:
                         item.setChecked(true);
                         //Toast.makeText(MainBN.this, "Browse clicked.", Toast.LENGTH_SHORT).show();
