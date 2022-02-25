@@ -101,27 +101,27 @@ public class Page3 extends Fragment {
 
         mostrarDatosPersona();
 
-//        actividadPersona.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(RadioGroup group, int checkedId) {
-//                if(checkedId == activoPerfil.getId()){
-//                    datoActividad = "Principiante";
-//                }else if(checkedId == principiantePerfil.getId()){
-//                    datoActividad = "Activo";
-//                }
-//            }
-//        });
-//
-//        generoPersona.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(RadioGroup group, int checkedId) {
-//                if(checkedId == hombreP.getId()){
-//                    datoGenero = "Hombre";
-//                }else if(checkedId == mujerP.getId()){
-//                    datoGenero = "Mujer";
-//                }
-//            }
-//        });
+        actividadPersona.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId == activoPerfil.getId()){
+                    datoActividad = "Activo";
+                }else if(checkedId == principiantePerfil.getId()){
+                    datoActividad = "Principiante";
+                }
+            }
+        });
+
+        generoPersona.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId == hombreP.getId()){
+                    datoGenero = "Hombre";
+                }else if(checkedId == mujerP.getId()){
+                    datoGenero = "Mujer";
+                }
+            }
+        });
 
 
         btnGuardar = view.findViewById(R.id.btGuardar);
@@ -136,15 +136,16 @@ public class Page3 extends Fragment {
                 persona.setEdad(e);
                 Float a = Float.parseFloat(alturaPersona.getText().toString());
                 persona.setAltura(a);
+
                 a = Float.parseFloat(pesoPersona.getText().toString());
                 persona.setPeso(a);
                 persona.setEmail(emailPersona.getText().toString());
-//                persona.setGenero(datoGenero);
-//                persona.setActividad(datoActividad);
-
-
+                persona.setGenero(datoGenero);
+                persona.setActividad(datoActividad);
 
                 bbdd.cambioDatosPersona(persona);
+
+                Toast.makeText(getContext(), "Se ha modificado el perfil.", Toast.LENGTH_LONG).show();
 
             }
         });

@@ -8,7 +8,6 @@ public class Persona implements Parcelable {
     private String email;
     private String password;
     private String username;
-    private String apellido;
 
     private int edad;
     private Float peso;
@@ -16,13 +15,12 @@ public class Persona implements Parcelable {
 
     private String genero;
     private String actividad;
+    private String calQuemar;
 
-
-    public Persona(String email, String password, String username, String apellido, int edad, Float peso, Float altura, String genero, String actividad, String identificador) {
+    public Persona(String email, String password, String username, int edad, Float peso, Float altura, String genero, String actividad, String identificador) {
         this.email = email;
         this.password = password;
         this.username = username;
-        this.apellido = apellido;
         this.edad = edad;
         this.peso = peso;
         this.altura = altura;
@@ -38,7 +36,6 @@ public class Persona implements Parcelable {
         email = in.readString();
         password = in.readString();
         username = in.readString();
-        apellido = in.readString();
         edad = in.readInt();
         if (in.readByte() == 0) {
             peso = null;
@@ -89,14 +86,6 @@ public class Persona implements Parcelable {
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
     }
 
     public int getEdad() {
@@ -157,7 +146,6 @@ public class Persona implements Parcelable {
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 ", username='" + username + '\'' +
-                ", apellido='" + apellido + '\'' +
                 ", edad=" + edad +
                 ", peso=" + peso +
                 ", altura=" + altura +
@@ -177,7 +165,6 @@ public class Persona implements Parcelable {
         dest.writeString(email);
         dest.writeString(password);
         dest.writeString(username);
-        dest.writeString(apellido);
         dest.writeInt(edad);
         if (peso == null) {
             dest.writeByte((byte) 0);
@@ -194,4 +181,54 @@ public class Persona implements Parcelable {
         dest.writeString(genero);
         dest.writeString(actividad);
     }
+
+
+    public int pasosDiariosRecomendados(){
+        int pasosDiariosRecomendados = 0;
+
+        if(genero.equalsIgnoreCase("Mujer") && actividad.equalsIgnoreCase("Activo")){
+            pasosDiariosRecomendados = 10000;
+            calQuemar = "2000 - 2300";
+        }
+
+        else if(genero.equalsIgnoreCase("Mujer") && actividad.equalsIgnoreCase("Principiante")){
+            pasosDiariosRecomendados = 7000;
+            calQuemar = "1600 - 1750";
+        }
+
+        else if(genero.equalsIgnoreCase("Hombre") && actividad.equalsIgnoreCase("Activo")){
+            calQuemar = "2300 - 2500";
+            pasosDiariosRecomendados = 10000;
+        }
+
+        else if(genero.equalsIgnoreCase("Hombre") && actividad.equalsIgnoreCase("Principiante")){
+            calQuemar = "2000-2200";
+            pasosDiariosRecomendados = 7000;
+        }
+
+        return pasosDiariosRecomendados;
+    }
+
+
+    public float pesoIdeal(){
+        Float pesoIdeal;
+
+        if(genero.equalsIgnoreCase("Mujer")){
+
+            pesoIdeal = ((altura - 100) - (altura - 150) / 2);
+
+        }else{
+            pesoIdeal= ((altura - 100) - (altura - 150) / 4);
+        }
+
+        return pesoIdeal;
+
+    }
+
+
+    public String getCaloriasAQuemar(){
+        return calQuemar;
+    }
+
+
 }

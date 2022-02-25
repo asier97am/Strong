@@ -32,8 +32,6 @@ public class Registro extends AppCompatActivity{
         repPassword = findViewById(R.id.etRepiteContraseña);
         accionRegistrarse = findViewById(R.id.bt1_registro_registrarse);
 
-
-
         accionRegistrarse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

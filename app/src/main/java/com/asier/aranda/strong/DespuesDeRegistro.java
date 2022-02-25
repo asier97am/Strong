@@ -90,6 +90,9 @@ public class DespuesDeRegistro extends AppCompatActivity{
 
                 bbdd.agregarUsuario(p);
                 Toast.makeText(getApplicationContext(), p.toString(), Toast.LENGTH_LONG).show();
+
+                intent.putExtra("persona", p);
+
                 startActivity(intent);
 
 

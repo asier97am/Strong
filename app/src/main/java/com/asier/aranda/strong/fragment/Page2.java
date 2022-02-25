@@ -31,7 +31,7 @@ public class Page2 extends Fragment {
     private String mParam2;
 
     //Nuevo por parte de la pagina.
-    private TextView nombreTitulo;
+    private TextView nombreTitulo, tvPesoIdeal, tvPasosDiarios, tvKcalDiarios;
 
     Persona persona = new Persona();
 
@@ -88,8 +88,13 @@ public class Page2 extends Fragment {
         View view = inflater.inflate(R.layout.fragment2_estadisticas, container, false);
 
         nombreTitulo = view.findViewById(R.id.tvNombreUsuario);
+        tvPesoIdeal = view.findViewById(R.id.tvVisualizaPeso);
+        tvPasosDiarios = view.findViewById(R.id.tvVisualizaPasos);
+        tvKcalDiarios = view.findViewById(R.id.tvVisualizaKcal);
 
-
+        tvPesoIdeal.setText(persona.pesoIdeal() + "");
+        tvPasosDiarios.setText(persona.pasosDiariosRecomendados() + "");
+        tvKcalDiarios.setText(persona.getCaloriasAQuemar());
         nombreTitulo.setText(persona.getUsername());
 
 
