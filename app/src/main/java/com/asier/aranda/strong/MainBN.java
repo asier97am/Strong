@@ -34,9 +34,6 @@ import com.asier.aranda.strong.databinding.ActivityMainBnBinding;
 
 
 public class MainBN extends AppCompatActivity {
-
-
-
     private ActivityMainBnBinding binding;
     Persona persona = new Persona();
     private MenuItem prevMenuItem;
