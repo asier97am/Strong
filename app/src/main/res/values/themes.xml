@@ -37,6 +37,9 @@
         <item name="colorPrimary">@color/verdeApp</item>
     </style>
 
+    <style name="Theme.Alert" parent="ThemeOverlay.AppCompat.Light"
+        ><item name="colorPrimary">@color/verdeApp</item></style>
+
     <style name="Theme.SinBarra.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
     <style name="Theme.SinBarra.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 

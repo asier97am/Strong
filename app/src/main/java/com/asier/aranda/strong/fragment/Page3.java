@@ -2,6 +2,7 @@ package com.asier.aranda.strong.fragment;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.view.LayoutInflater;
@@ -13,6 +14,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
@@ -28,6 +30,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 public class Page3 extends Fragment {
 
     private ImageView info;
+    private Button btGuardar;
 
     Persona persona;
     EditText nombrePersona, edadPersona, pesoPersona, alturaPersona, emailPersona;
@@ -48,6 +51,7 @@ public class Page3 extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
     }
 
     @Override
@@ -158,20 +162,24 @@ public class Page3 extends Fragment {
 
 
     public void showAlertDialogButtonClicked(Page3 Page3){
-        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(getContext());
+        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(getContext(),R.style.Theme_Alert);
         builder.setTitle("Información");//TITULO
         builder.setMessage("Aquí podrás cambiar tus datos por si te equivocaste");//MENSAJITO
         builder.setIcon(R.drawable.information);//ICONO
         builder.setCancelable(false);
-        builder.setNeutralButton("skip", new DialogInterface.OnClickListener() {
+        builder.setNeutralButton("Skip", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-
                 dialog.dismiss();
             }
         });
         AlertDialog dialog=builder.create();
         dialog.show();
+    }
+
+    public void btGuardar (View view){
+        Toast.makeText(getContext(), "SAVE", Toast.LENGTH_SHORT).show();
+
     }
 
 

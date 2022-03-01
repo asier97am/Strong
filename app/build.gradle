@@ -9,9 +9,8 @@ android {
         applicationId "com.asier.aranda.strong"
         minSdk 23
         targetSdk 31
-        versionCode 1
-        versionName "1.0"
-
+        versionCode 2
+        versionName "1.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -31,7 +30,8 @@ android {
 }
 
 dependencies {
-
+    implementation 'com.squareup.picasso:picasso:2.4.0'
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
     implementation 'androidx.appcompat:appcompat:1.3.1'
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.1'

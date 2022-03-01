@@ -15,6 +15,7 @@
         android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
     </ImageView>
 
     <ScrollView
@@ -84,15 +85,13 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@drawable/ic_info_foreground"
+                android:contentDescription="@string/todo"
                 app:layout_constraintBottom_toBottomOf="@+id/tvPerfil"
                 app:layout_constraintEnd_toEndOf="@+id/guideline3"
-                app:layout_constraintHorizontal_bias="0.816"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@id/tvPerfil"
                 app:layout_constraintTop_toTopOf="@+id/guideline4"
-                app:layout_constraintVertical_bias="0.458"
-                android:contentDescription="@string/todo">
-
-            </ImageView>
+                app:layout_constraintVertical_bias="0.375"></ImageView>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilNombre"
@@ -112,23 +111,6 @@
                     tools:ignore="SpeakableTextPresentCheck"></EditText>
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- TextInputLayout email -->
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilApellidos"
-                style="@style/textInputLayout"
-                app:layout_constraintEnd_toEndOf="@+id/guideline3"
-                app:layout_constraintStart_toStartOf="@+id/guideline2"
-                app:layout_constraintTop_toBottomOf="@+id/tilNombre">
-
-                <!-- EditText email -->
-                <EditText
-                    android:id="@+id/etApellidos"
-                    style="@style/editText"
-                    android:background="@color/transparente"
-                    android:hint="@string/apellidos"
-                    android:inputType="textEmailAddress"
-                    tools:ignore="SpeakableTextPresentCheck"></EditText>
-            </com.google.android.material.textfield.TextInputLayout>
 
             <!-- TextInputLayout contraseña -->
             <com.google.android.material.textfield.TextInputLayout
@@ -136,7 +118,7 @@
                 style="@style/textInputLayout"
                 app:layout_constraintEnd_toEndOf="@+id/guideline3"
                 app:layout_constraintStart_toStartOf="@+id/guideline2"
-                app:layout_constraintTop_toBottomOf="@+id/tilApellidos">
+                app:layout_constraintTop_toBottomOf="@+id/tilNombre">
 
                 <!-- EditText contraseña -->
                 <EditText
