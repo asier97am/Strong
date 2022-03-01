@@ -70,6 +70,7 @@ public class RecyclerViewAdaptador extends RecyclerView.Adapter<RecyclerViewAdap
                 AlertDialog.Builder builder=new AlertDialog.Builder(v.getContext());
                 View view=LayoutInflater.from(builder.getContext()).inflate(R.layout.ejercicio_biceps1,null);
                 ImageView dimg=(ImageView)view.findViewById(R.id.foto);
+
                 Picasso.with(context).load(ejercicioLista1.getFotoEjercicio()).into(dimg);
                 TextView tvname=(TextView)view.findViewById(R.id.tituloEjercicio);
                 tvname.setText(ejercicioLista1.getEjercicio());
