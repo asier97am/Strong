@@ -176,7 +176,6 @@ public class Page3 extends Fragment {
     }
 
     public void mostrarDatosPersona(){
-
         nombrePersona.setText(persona.getUsername());
         edadPersona.setText(persona.getEdad() + "");
         alturaPersona.setText(persona.getAltura().toString());
