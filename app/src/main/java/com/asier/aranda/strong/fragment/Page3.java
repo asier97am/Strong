@@ -175,5 +175,28 @@ public class Page3 extends Fragment {
         dialog.show();
     }
 
+    public void mostrarDatosPersona(){
 
+        nombrePersona.setText(persona.getUsername());
+        edadPersona.setText(persona.getEdad() + "");
+        alturaPersona.setText(persona.getAltura().toString());
+        emailPersona.setText(persona.getEmail());
+        pesoPersona.setText(persona.getPeso().toString());
+
+        if(persona.getGenero().equals("Hombre")){
+            datoGenero = "Hombre";
+            hombreP.setChecked(true);
+        }else{
+            datoGenero = "Mujer";
+            mujerP.setChecked(true);
+        }
+
+        if(persona.getActividad().equals("Principiante")){
+            datoActividad = "Principiante";
+            principiantePerfil.setChecked(true);
+        }else{
+            datoActividad = "Activo";
+            activoPerfil.setChecked(true);
+        }
+    }
 }

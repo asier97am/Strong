@@ -79,9 +79,6 @@ public class DataPersona extends SQLiteOpenHelper {
         dato = cursor.getString(cursor.getColumnIndex("correo"));
         p.setEmail(dato);
 
-        dato = cursor.getString(cursor.getColumnIndex("apellido"));
-        p.setApellido(dato);
-
         dato = cursor.getString(cursor.getColumnIndex("nombre"));
         p.setUsername(dato);
 
