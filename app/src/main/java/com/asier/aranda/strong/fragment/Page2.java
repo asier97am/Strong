@@ -4,10 +4,15 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
+import com.asier.aranda.strong.MainBN;
+import com.asier.aranda.strong.Persona;
 import com.asier.aranda.strong.R;
+
+import org.w3c.dom.Text;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -25,8 +30,18 @@ public class Page2 extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public Page2() {
+    //Nuevo por parte de la pagina.
+    private TextView nombreTitulo, tvPesoIdeal, tvPasosDiarios, tvKcalDiarios;
+
+    Persona persona = new Persona();
+
+    public Page2(Persona persona) {
         // Required empty public constructor
+        this.persona = persona;
+    }
+
+    public Page2() {
+
     }
 
     /**
@@ -57,6 +72,7 @@ public class Page2 extends Fragment {
 //                .centerCrop()
 //                .into(mback);
 
+
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
@@ -70,7 +86,20 @@ public class Page2 extends Fragment {
         //ImageView mback= new ImageView(.findViewById(R.id.backView));
 
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment2_estadisticas, container, false);
+        View view = inflater.inflate(R.layout.fragment2_estadisticas, container, false);
+
+        nombreTitulo = view.findViewById(R.id.tvNombreUsuario);
+        tvPesoIdeal = view.findViewById(R.id.tvVisualizaPeso);
+        tvPasosDiarios = view.findViewById(R.id.tvVisualizaPasos);
+        tvKcalDiarios = view.findViewById(R.id.tvVisualizaKcal);
+
+        tvPesoIdeal.setText(persona.pesoIdeal() + "");
+        tvPasosDiarios.setText(persona.pasosDiariosRecomendados() + "");
+        tvKcalDiarios.setText(persona.getCaloriasAQuemar());
+        nombreTitulo.setText(persona.getUsername());
+
+
+        return view;
     }
 
 

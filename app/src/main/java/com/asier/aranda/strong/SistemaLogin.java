@@ -1,6 +1,7 @@
 package com.asier.aranda.strong;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,12 +10,13 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.asier.aranda.strong.bbddUser.DataPersona;
 import com.asier.aranda.strong.fragment.Page1;
 
 public class SistemaLogin extends AppCompatActivity {
     EditText usuario, password;
     Button accionAccederAlHome, accionRegistrarse;
-
+    DataPersona bbdd = new DataPersona(SistemaLogin.this);
     Intent intent;
 
     //Usuario de prueba
@@ -36,16 +38,19 @@ public class SistemaLogin extends AppCompatActivity {
         accionAccederAlHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Persona p = new Persona();
+                String user = usuario.getText().toString();
+                String pass = password.getText().toString();
 
-                Intent intent=new Intent(SistemaLogin.this, MainBN.class);
-                startActivity(intent);
-//                if(comprobacionUsuario(usuario.getText().toString(), password.getText().toString())){
-//                    Intent intent=new Intent(SistemaLogin.this, MainBN.class);
-//                    startActivity(intent);
-//
-//                }else {
-//                    Toast.makeText(getApplicationContext(), "Usuario o contraseña no coinciden", Toast.LENGTH_LONG).show();
-//                }
+                if(bbdd.busquedaDatosPersona(user, pass) != null){
+                    intent = new Intent(SistemaLogin.this, MainBN.class);
+                    p = bbdd.busquedaDatosPersona(user, pass);
+                    intent.putExtra("persona", p);
+
+                    startActivity(intent);
+                }else {
+                    Toast.makeText(getApplicationContext(), "Usuario o contraseña no coinciden", Toast.LENGTH_LONG).show();
+                }
             }
         });
 
@@ -53,7 +58,7 @@ public class SistemaLogin extends AppCompatActivity {
         accionRegistrarse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(SistemaLogin.this, Registro.class);
+                Intent intent = new Intent(SistemaLogin.this, Registro.class);
                 startActivity(intent);
             }
         });

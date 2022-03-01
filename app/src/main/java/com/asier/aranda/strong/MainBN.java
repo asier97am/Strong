@@ -2,6 +2,7 @@ package com.asier.aranda.strong;
 
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -37,13 +38,16 @@ public class MainBN extends AppCompatActivity {
 
 
     private ActivityMainBnBinding binding;
-
+    Persona persona = new Persona();
     private MenuItem prevMenuItem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //getSupportActionBar().hide();
+        persona = this.getIntent().getParcelableExtra("persona");
+        //Bundle extras = getIntent().getExtras();
+        //boolean invitado = extras.getBoolean("invitado");
 
         //RECYCLER
 
@@ -53,7 +57,7 @@ public class MainBN extends AppCompatActivity {
         binding = ActivityMainBnBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
+        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager(), persona);
         ViewPager viewPager = binding.viewPager;
         viewPager.setAdapter(sectionsPagerAdapter);
 
@@ -71,6 +75,7 @@ public class MainBN extends AppCompatActivity {
                         //removeBadge(mybottomNavView,item.getItemId());
                         viewPager.setCurrentItem(0);
                         break;
+
                     case R.id.estadisticas:
                         item.setChecked(true);
                         //Toast.makeText(MainBN.this, "Browse clicked.", Toast.LENGTH_SHORT).show();

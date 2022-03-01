@@ -128,7 +128,6 @@
         android:id="@+id/bt1_registro_registrarse"
         style="@style/botonVerde"
         android:layout_marginBottom="10dp"
-        android:onClick="bt1_registro_registrarse"
         android:text="@string/registrarse"
         app:layout_constraintBottom_toTopOf="@+id/bt2_registro_volver_al_login"
         app:layout_constraintEnd_toStartOf="@+id/GuidelineDerecha"
