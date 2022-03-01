@@ -43,9 +43,9 @@ public class Bienvenida extends AppCompatActivity {
 
     public void bt2_login_entrar_como_invitado(View view) {
         Intent intent = new Intent(Bienvenida.this, MainBN.class);
-        Persona p = new Persona();
-        intent.putExtra("persona", p);
-        intent.putExtra("invitado", invitado);
+        //Persona p = new Persona();
+        //intent.putExtra("persona", p);
+       // intent.putExtra("invitado", invitado);
         startActivity(intent);
     }
 
