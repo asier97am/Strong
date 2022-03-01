@@ -54,7 +54,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:contentDescription="@string/todo"></ImageView>
+        android:contentDescription="@string/todo">
+    </ImageView>
 
     <TextView
         android:id="@+id/tvBienvenida"
