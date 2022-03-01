@@ -2,7 +2,9 @@ package com.asier.aranda.strong;
 
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,8 +19,10 @@ import com.asier.aranda.strong.bbddUser.DataPersona;
 import com.asier.aranda.strong.fragment.Page1;
 import com.bumptech.glide.Glide;
 
+import java.io.Serializable;
 
-public class DespuesDeRegistro extends AppCompatActivity {
+
+public class DespuesDeRegistro extends AppCompatActivity{
     EditText edad, peso, altura;
     RadioGroup actividad, genero;
     Button accionTerminaRegistro;
@@ -43,6 +47,8 @@ public class DespuesDeRegistro extends AppCompatActivity {
         genero = findViewById(R.id.radioGenero);
 
         accionTerminaRegistro = findViewById(R.id.terminaRegistro);
+
+        p = (Persona) this.getIntent().getParcelableExtra("persona");
 
 
         ImageView mback = findViewById(R.id.imagenDespRegistro);
@@ -88,18 +94,23 @@ public class DespuesDeRegistro extends AppCompatActivity {
 
                 Intent intent = new Intent(DespuesDeRegistro.this, MainBN.class);
 
-//                Integer ed = Integer.parseInt(edad.getText().toString());
-//                p.setEdad(ed);
-//                Float pe = Float.parseFloat(peso.getText().toString());
-//                p.setPeso(pe);
-//                p.setGenero(datoGenero);
-//                p.setActividad(datoActividad);
+                int e = Integer.parseInt(edad.getText().toString());
+                p.setEdad(e);
+                Float pe = Float.parseFloat(altura.getText().toString());
+                p.setAltura(pe);
+                pe = Float.parseFloat(peso.getText().toString());
+                p.setPeso(pe);
+                p.setGenero(datoGenero);
+                p.setActividad(datoActividad);
 
+                bbdd.agregarUsuario(p);
                 Toast.makeText(getApplicationContext(), p.toString(), Toast.LENGTH_LONG).show();
 
                 intent.putExtra("persona", p);
 
                 startActivity(intent);
+
+
             }
         });
 

@@ -84,15 +84,13 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@drawable/ic_info_foreground"
+                android:contentDescription="@string/todo"
                 app:layout_constraintBottom_toBottomOf="@+id/tvPerfil"
                 app:layout_constraintEnd_toEndOf="@+id/guideline3"
-                app:layout_constraintHorizontal_bias="0.816"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@id/tvPerfil"
                 app:layout_constraintTop_toTopOf="@+id/guideline4"
-                app:layout_constraintVertical_bias="0.458"
-                android:contentDescription="@string/todo">
-
-            </ImageView>
+                app:layout_constraintVertical_bias="0.375"></ImageView>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tilNombre"
