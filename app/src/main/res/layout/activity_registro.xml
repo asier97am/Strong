@@ -84,7 +84,7 @@
 
     <!-- TextInputLayout contraseña -->
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilContraseña"
+        android:id="@+id/tilContrasena"
         style="@style/textInputLayout"
         app:passwordToggleEnabled="true"
         app:layout_constraintEnd_toStartOf="@+id/GuidelineDerecha"
@@ -93,7 +93,7 @@
 
         <!-- EditText contraseña -->
         <EditText
-            android:id="@+id/etContraseña"
+            android:id="@+id/etContrasena"
             style="@style/editText"
             android:background="@color/transparente"
             android:hint="@string/contrasenia"
@@ -103,16 +103,16 @@
 
     <!-- TextInputLayout repite contraseña -->
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilRepiteContraseña"
+        android:id="@+id/tilRepiteContrasena"
         style="@style/textInputLayout"
         app:passwordToggleEnabled="true"
         app:layout_constraintEnd_toStartOf="@+id/GuidelineDerecha"
         app:layout_constraintStart_toStartOf="@+id/GuidelineIzquierda"
-        app:layout_constraintTop_toBottomOf="@+id/tilContraseña">
+        app:layout_constraintTop_toBottomOf="@+id/tilContrasena">
 
         <!-- EditText repite contraseña -->
         <EditText
-            android:id="@+id/etRepiteContraseña"
+            android:id="@+id/etRepiteContrasena"
             style="@style/editText"
             android:background="@color/transparente"
             android:hint="@string/repite_contrasenia"

@@ -14,11 +14,6 @@ import com.asier.aranda.strong.R;
 
 import org.w3c.dom.Text;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link Page2#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class Page2 extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
@@ -44,23 +39,6 @@ public class Page2 extends Fragment {
 
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Page2.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static Page2 newInstance(String param1, String param2) {
-        Page2 fragment = new Page2();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -73,10 +51,6 @@ public class Page2 extends Fragment {
 //                .into(mback);
 
 
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
 
     }
 

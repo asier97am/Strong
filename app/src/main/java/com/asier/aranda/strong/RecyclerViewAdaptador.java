@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -19,7 +20,7 @@ public class RecyclerViewAdaptador extends RecyclerView.Adapter<RecyclerViewAdap
     Context context;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView ejercicio, descripcion,descripcion2;
+        private TextView ejercicio, descripcion, descripcion2;
         private ImageView fotoEjercicio;
         private CardView card_view;
 
@@ -32,11 +33,11 @@ public class RecyclerViewAdaptador extends RecyclerView.Adapter<RecyclerViewAdap
         }
     }
 
-    public ArrayList<EjerciciosHome> ejercicioLista= new ArrayList<>();
+    public ArrayList<EjerciciosHome> ejercicioLista = new ArrayList<>();
 
     public RecyclerViewAdaptador(ArrayList<EjerciciosHome> ejercicioLista, Context context) {
         this.ejercicioLista = ejercicioLista;
-        this.context=context;
+        this.context = context;
     }
 
     @Override
@@ -55,29 +56,27 @@ public class RecyclerViewAdaptador extends RecyclerView.Adapter<RecyclerViewAdap
 
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
-
-
-        EjerciciosHome ejercicioLista1=ejercicioLista.get(position);
+        EjerciciosHome ejercicioLista1 = ejercicioLista.get(position);
         viewHolder.ejercicio.setText(ejercicioLista.get(position).getEjercicio());
         viewHolder.descripcion.setText(ejercicioLista.get(position).getDescripcion());
-       // viewHolder.descripcion2.setText(ejercicioLista.get(position).getDescripcion2());
+        // viewHolder.descripcion2.setText(ejercicioLista.get(position).getDescripcion2());
         viewHolder.fotoEjercicio.setImageResource(ejercicioLista.get(position).getFotoEjercicio());
 
 
         viewHolder.card_view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder builder=new AlertDialog.Builder(v.getContext());
-                View view=LayoutInflater.from(builder.getContext()).inflate(R.layout.ejercicio_biceps1,null);
-                ImageView dimg=(ImageView)view.findViewById(R.id.foto);
+                AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
+                View view = LayoutInflater.from(builder.getContext()).inflate(R.layout.ejercicio_biceps1, null);
+                ImageView dimg = (ImageView) view.findViewById(R.id.foto);
 
                 Picasso.with(context).load(ejercicioLista1.getFotoEjercicio()).into(dimg);
-                TextView tvname=(TextView)view.findViewById(R.id.tituloEjercicio);
+                TextView tvname = (TextView) view.findViewById(R.id.tituloEjercicio);
                 tvname.setText(ejercicioLista1.getEjercicio());
-                TextView moviename=(TextView)view.findViewById(R.id.decripcionEjercicio2);
-               // TextView moviename2=(TextView)view.findViewById(R.id.moviename2);
+                TextView moviename = (TextView) view.findViewById(R.id.decripcionEjercicio2);
+                // TextView moviename2=(TextView)view.findViewById(R.id.moviename2);
                 moviename.setText(ejercicioLista1.getDescripcion2());
-               // moviename2.setText(ejercicioLista1.getDescripcion2());
+                // moviename2.setText(ejercicioLista1.getDescripcion2());
                 builder.setView(view);
 
                 builder.setNegativeButton("back", new DialogInterface.OnClickListener() {
@@ -86,7 +85,7 @@ public class RecyclerViewAdaptador extends RecyclerView.Adapter<RecyclerViewAdap
                         dialog.dismiss();
                     }
                 });
-                final AlertDialog alertDialog=builder.create();
+                final AlertDialog alertDialog = builder.create();
                 alertDialog.show();
             }
 
@@ -94,9 +93,8 @@ public class RecyclerViewAdaptador extends RecyclerView.Adapter<RecyclerViewAdap
     }
 
 
-
     @Override
-    public int getItemCount(){
+    public int getItemCount() {
         return ejercicioLista.size();
     }
 

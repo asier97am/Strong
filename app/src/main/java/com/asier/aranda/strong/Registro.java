@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
-import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,8 +11,6 @@ import android.widget.Toast;
 
 
 import com.asier.aranda.strong.bbddUser.DataPersona;
-
-import java.io.Serializable;
 
 public class Registro extends AppCompatActivity{
     EditText user, password, email, repPassword;
@@ -28,8 +24,8 @@ public class Registro extends AppCompatActivity{
 
         user = findViewById(R.id.etNombreUsuario);
         email = findViewById(R.id.etEmail);
-        password = findViewById(R.id.etContraseña);
-        repPassword = findViewById(R.id.etRepiteContraseña);
+        password = findViewById(R.id.etContrasena);
+        repPassword = findViewById(R.id.etRepiteContrasena);
         accionRegistrarse = findViewById(R.id.bt1_registro_registrarse);
 
         accionRegistrarse.setOnClickListener(new View.OnClickListener() {

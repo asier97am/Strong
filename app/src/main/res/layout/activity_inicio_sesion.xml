@@ -4,15 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/imangeiniciosesion"
-    >
+    android:background="@drawable/imangeiniciosesion">
 
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/gradiant"
-        >
-    </View>
+        android:background="@drawable/gradiant"></View>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/lineaIzd"
@@ -28,54 +25,16 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.95" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilEmail"
-        style="@style/textInputLayout"
-        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        >
-
-        <EditText
-            android:id="@+id/emailSesion"
-            style="@style/editText"
-            android:maxLines="1"
-            android:hint="@string/email"
-            android:inputType="textEmailAddress"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
     <TextView
         android:id="@+id/textView"
-        android:layout_marginTop="32dp"
         style="@style/estiloTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"
         app:layout_constraintTop_toTopOf="parent" />
 
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilPassword"
-        style="@style/textInputLayout"
-        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
-        app:layout_constraintTop_toBottomOf="@+id/tilEmail"
-        >
-
-        <EditText
-            android:id="@+id/passwordSesion"
-            style="@style/editText"
-            android:maxLines="1"
-            android:hint="@string/contrasenia"
-            android:inputType="textPassword"
-            tools:ignore="SpeakableTextPresentCheck" />
-
-    </com.google.android.material.textfield.TextInputLayout>
     <TextView
         android:id="@+id/textView2"
         android:layout_width="314dp"
@@ -90,6 +49,43 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/lineaIzd"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilEmail"
+        style="@style/textInputLayout"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <EditText
+            android:id="@+id/emailSesion"
+            style="@style/editText"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPassword"
+        style="@style/textInputLayout"
+        app:layout_constraintEnd_toStartOf="@+id/lineaDerecha"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/lineaIzd"
+        app:layout_constraintTop_toBottomOf="@+id/tilEmail">
+
+        <EditText
+            android:id="@+id/passwordSesion"
+            style="@style/editText"
+            android:hint="@string/contrasenia"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <TextView
         android:id="@+id/textView5"
